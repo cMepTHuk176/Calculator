@@ -22,4 +22,8 @@
     </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
 
+    <FlyoutItem Title="мой_калькулятор" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Page2}"/>
+    </FlyoutItem>
+    
 </Shell>
