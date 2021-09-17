@@ -63,12 +63,12 @@
         <Button Text="+" Grid.Row="4" Grid.Column="4" BackgroundColor="Aqua" TextColor="Black" 
                 FontSize="Large" Clicked = "OnSelectOperator"></Button>
         <Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4" BackgroundColor="LightBlue" 
-                TextColor="Black" FontSize="Large" Clicked = "OnSelectOperator"></Button>
+                TextColor="Black" FontSize="Large" Clicked = "OnCalculate"></Button>
 
         <Button Text="&lt;-" Grid.Row="2" Grid.Column="4" BackgroundColor="LightYellow" TextColor="Black"
                  FontSize="Medium"></Button>
         <Button Text="C" Grid.Row="3" Grid.Column="4" BackgroundColor="LightYellow" TextColor="Black"
-                 FontSize="Medium"></Button>
+                 FontSize="Medium" Clicked="OnClear"></Button>
 
         <Label x:Name="displayLabel" Text="0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" 
                Background="White" TextColor="Black" FontSize="36" VerticalTextAlignment="Center" 

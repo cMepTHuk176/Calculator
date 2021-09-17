@@ -11,7 +11,7 @@ namespace Calculator
 {
     enum NumberState
     {
-        FIRST, SECOND
+        FIRST, SECOND, RESULT
     }
 
 
@@ -23,18 +23,60 @@ namespace Calculator
         private static bool isCleared = false;
         private double number1, number2;
         private string mathOperator;
-
         
         public Page2()
         {
             InitializeComponent();
         }
 
-        private void OnSelectOperator(object sender, EventArgs e)
+        private void OnClear(object sender = null, EventArgs e = null)
         {
-            if (!isMathOperator && state != NumberState.SECOND)
+            displayLabel.Text = "0";
+            isMathOperator = false;
+            state = NumberState.FIRST;
+            isCleared = false;
+            number1 = 0;
+            number2 = 0;
+            mathOperator = "";
+        }
+
+        private void OnCalculate(object sender, EventArgs e)
+        {
+            if (isMathOperator && (state == NumberState.SECOND || state == NumberState.RESULT))
             {
-                displayLabel.Text += ((Button)(sender)).Text; // ??
+                double result = 0;
+
+                switch (mathOperator)
+                {
+                    case "/":
+                        result = (number1 / number2);
+                        break;
+
+                    case "x":
+                        result = (number1 * number2);
+                        break;
+
+                    case "+":
+                        result = (number1 + number2);
+                        break;
+
+                    case "-":
+                        result = (number1 - number2);
+                        break;
+                }
+
+                OnClear();
+                displayLabel.Text = "= " + result;
+                number1 = result;
+                state = NumberState.RESULT;
+            }
+        }
+
+        private void OnSelectOperator(object sender, EventArgs e)
+        { 
+            if (state == NumberState.RESULT || (!isMathOperator && state != NumberState.SECOND))
+            {
+                displayLabel.Text += ((Button)(sender)).Text;
                 mathOperator = ((Button)(sender)).Text;
                 isMathOperator = true;
             }
@@ -52,27 +94,33 @@ namespace Calculator
             {
                 if (!isCleared)
                 {
-                    displayLabel.Text = "";
-                    displayLabel.Text += currentPress;
-                    isCleared = true;
+                    if (state != NumberState.RESULT)
+                    {
+                        displayLabel.Text = "";
+                        displayLabel.Text += currentPress;
+                        isCleared = true;
+                    }
+                    else
+                        displayLabel.Text += currentPress;
                 }
                 else 
                     displayLabel.Text += currentPress;
             }
 
             if (state == NumberState.FIRST && !isMathOperator)
+               double.TryParse(displayLabel.Text, out number1);
+
+            else if (state == NumberState.RESULT)
             {
-                number1 = double.Parse(displayLabel.Text);
+                string test = displayLabel.Text.Substring(number1.ToString().Length + 3);
+                double.TryParse(test, out number2) ;
             }
             else
             {
                 state = NumberState.SECOND;
-                double.TryParse(number1.ToString().Skip(number1.ToString().Length + 1).ToString(), out number2);
+                double.TryParse(displayLabel.Text.Substring(number1.ToString().Length + 1), out number2);
             }
-            
-            
-            
-            
+             
         }
         
     }
