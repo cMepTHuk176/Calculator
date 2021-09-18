@@ -11,9 +11,8 @@ namespace Calculator
 {
     enum NumberState
     {
-        FIRST, SECOND, RESULT
+        FIRST, SECOND, RESULT, ERROR
     }
-
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page2 : ContentPage
@@ -29,15 +28,38 @@ namespace Calculator
             InitializeComponent();
         }
 
+        private void OnRemoveSymbol(object sender, EventArgs e)
+        {
+            char lastLabelSymbol = displayLabel.Text[displayLabel.Text.Length - 1];
+
+            if (displayLabel.Text.Length <= 1)
+                OnClear();
+
+            else if (lastLabelSymbol == '/' || lastLabelSymbol == 'x' || lastLabelSymbol == '-'
+                || lastLabelSymbol == '+')
+            {
+                displayLabel.Text = displayLabel.Text.Remove(displayLabel.Text.Length - 1);
+                mathOperator = "";
+                isMathOperator = false;
+                state = NumberState.FIRST;
+            }
+
+            else if (state == NumberState.RESULT)
+                OnClear();
+
+            else
+                displayLabel.Text = displayLabel.Text.Remove(displayLabel.Text.Length - 1);
+        }
+
         private void OnClear(object sender = null, EventArgs e = null)
         {
             displayLabel.Text = "0";
-            isMathOperator = false;
-            state = NumberState.FIRST;
             isCleared = false;
+            state = NumberState.FIRST;
             number1 = 0;
             number2 = 0;
             mathOperator = "";
+            isMathOperator = false;
         }
 
         private void OnCalculate(object sender, EventArgs e)
@@ -49,7 +71,10 @@ namespace Calculator
                 switch (mathOperator)
                 {
                     case "/":
-                        result = (number1 / number2);
+                        if (number2 == 0)
+                            state = NumberState.ERROR;
+                        else
+                            result = (number1 / number2);
                         break;
 
                     case "x":
@@ -65,10 +90,16 @@ namespace Calculator
                         break;
                 }
 
-                OnClear();
-                displayLabel.Text = "= " + result;
-                number1 = result;
-                state = NumberState.RESULT;
+                if (state == NumberState.ERROR)
+                    DisplayAlert("АшыПка! ЭРРор Тревога пuздец", "ти чо дибил делить на 0?", "ок, больше не буду :(");
+
+                else
+                {
+                    OnClear();
+                    displayLabel.Text = "= " + result;
+                    number1 = result;
+                    state = NumberState.RESULT;
+                }
             }
         }
 
@@ -76,9 +107,14 @@ namespace Calculator
         { 
             if (state == NumberState.RESULT || (!isMathOperator && state != NumberState.SECOND))
             {
-                displayLabel.Text += ((Button)(sender)).Text;
-                mathOperator = ((Button)(sender)).Text;
-                isMathOperator = true;
+                if (state == NumberState.RESULT)
+                {
+                    displayLabel.Text = "" + number1.ToString();
+                    ActionsAfterOperatorSelect(sender);
+                }
+                else
+                    ActionsAfterOperatorSelect(sender);
+                
             }
         }
 
@@ -87,14 +123,20 @@ namespace Calculator
             bool zeroState = false;
             string currentPress = ((Button)(sender)).Text;
 
-            if (displayLabel.Text == "0" && currentPress == "0")
+            if (state == NumberState.ERROR)
+                OnClear();
+
+            if ((displayLabel.Text == "0" && currentPress == "0") || (state == NumberState.RESULT && currentPress == "0"))
                 zeroState = true;
+
+            if (state == NumberState.RESULT)
+                OnClear();
 
             if (!zeroState)
             {
                 if (!isCleared)
                 {
-                    if (state != NumberState.RESULT)
+                    if (state != NumberState.SECOND && state != NumberState.RESULT)
                     {
                         displayLabel.Text = "";
                         displayLabel.Text += currentPress;
@@ -108,12 +150,12 @@ namespace Calculator
             }
 
             if (state == NumberState.FIRST && !isMathOperator)
-               double.TryParse(displayLabel.Text, out number1);
+                double.TryParse(displayLabel.Text, out number1);
 
             else if (state == NumberState.RESULT)
             {
                 string test = displayLabel.Text.Substring(number1.ToString().Length + 3);
-                double.TryParse(test, out number2) ;
+                double.TryParse(test, out number2);
             }
             else
             {
@@ -123,5 +165,13 @@ namespace Calculator
              
         }
         
+        private void ActionsAfterOperatorSelect(object sender)
+        {
+            displayLabel.Text += ((Button)(sender)).Text;
+            mathOperator = ((Button)(sender)).Text;
+            isMathOperator = true;
+            state = NumberState.SECOND;
+        }
+
     }
 }
