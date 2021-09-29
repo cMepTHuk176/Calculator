@@ -14,11 +14,23 @@
     <FlyoutItem Title="калькулятор" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
     </FlyoutItem>
-    <FlyoutItem Title="динамическая страница" Icon="xamarin.png">
+    <FlyoutItem Title="дизайн обьём - шар" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
     </FlyoutItem>
-    <FlyoutItem Title="пропорция" Icon="xamarin.png">
+    <FlyoutItem Title="дизайн обьём - паралеллипипед" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Page2}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="дизайн обьём - Квадратная пирамида" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="дизайн обьём - Конус" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Page4}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="дизайн обьём - Треугольная пирамида" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Page5}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="дизайн обьём - Цилиндр" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Page6}"/>
     </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
 
