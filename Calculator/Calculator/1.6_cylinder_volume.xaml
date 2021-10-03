@@ -32,26 +32,14 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
 
 
-        <Button Text="Шар" Grid.Row="2" Grid.Column="0"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="Куб" Grid.Row="2" Grid.Column="1"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="ПирамидаК" Grid.Row="2" Grid.Column="2"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0"  />
+        
 
         <Entry Placeholder="R" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" />
         <Entry Placeholder="H" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
 
-        <Button Text="Конус" Grid.Row="2" Grid.Column="3"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="ПирамидаТ" Grid.Row="2" Grid.Column="4"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="Цилиндр" Grid.Row="2" Grid.Column="5"
+
+
+        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="36" BorderRadius="0"  />
 
