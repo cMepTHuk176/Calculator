@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page3 : ContentPage
+    public partial class square_pyramid_volume : ContentPage
     {
-        public Page3()
+        public square_pyramid_volume()
         {
             InitializeComponent();
         }
