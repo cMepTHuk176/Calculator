@@ -12,9 +12,17 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
+        string selected;
         public Volume_Main()
         {
             InitializeComponent();
+        }
+     void figurelist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                selected = e.SelectedItem.ToString();
+            }
         }
     }
 }

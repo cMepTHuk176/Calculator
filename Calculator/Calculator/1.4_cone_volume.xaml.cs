@@ -12,9 +12,16 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class cone_volume : ContentPage
     {
+        string Selected;
+
         public cone_volume()
         {
             InitializeComponent();
+        }
+         void phonesList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+                Selected = e.SelectedItem.ToString();
         }
     }
 }
