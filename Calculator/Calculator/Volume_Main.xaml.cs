@@ -12,17 +12,48 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
-        string selected;
+        private string selected;
+
         public Volume_Main()
         {
             InitializeComponent();
         }
-     void figurelist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+
+        async void figurelist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {
                 selected = e.SelectedItem.ToString();
             }
+
+            switch (selected)
+            {
+                case "объем сферы":
+                    await Navigation.PushAsync(new sphere_volume());
+                    break;
+
+                case "объем куба": // TODO
+
+                    break;
+
+                case "объем параллепипеда": // TODO
+
+                    break;
+
+                case "объем квадратной пирамиды": // TODO
+
+                    break;
+
+                case "объем треугольной пирамиды": // TODO
+
+                    break;
+
+                case "объем цилиндра": // TODO
+
+                    break;
+            }
         }
+
+
     }
 }
