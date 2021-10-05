@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +12,7 @@ namespace Calculator
     public partial class Volume_Main : ContentPage
     {
         private string selected;
+        internal static readonly string ERROR = "ОШИБКА";
 
         public Volume_Main()
         {
