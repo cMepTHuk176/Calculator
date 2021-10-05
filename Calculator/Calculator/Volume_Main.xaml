@@ -6,7 +6,7 @@
         <ResourceDictionary>
             <x:Array x:Key="figure" Type="{x:Type x:String}">
                 <x:String>объем сферы</x:String>
-                <x:String>объем куба</x:String>
+                <x:String>объем конуса</x:String>
                 <x:String>объем параллепипеда</x:String>
                 <x:String>объем квадратной пирамиды</x:String>
                 <x:String>объем треугольной пирамиды</x:String>

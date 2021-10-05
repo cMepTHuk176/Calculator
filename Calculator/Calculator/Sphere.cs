@@ -6,7 +6,7 @@ namespace Calculator
 {
     public class Sphere
     {
-        public double Volume(double radius)
+        public static double Volume(double radius)
         {
             return Math.PI * Math.Pow(radius, 3) * 4 / 3;
         }

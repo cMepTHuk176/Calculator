@@ -16,5 +16,15 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private async void Volume_Back(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        private void Result_Cylinder(object sender, EventArgs e)
+        {
+            resultText.Text = CylinderVolume.Volume(1, 1).ToString(); // TODO
+        }
     }
 }

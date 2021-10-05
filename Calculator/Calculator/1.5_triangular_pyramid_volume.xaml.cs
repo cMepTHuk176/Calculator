@@ -16,5 +16,15 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private async void Volume_Back(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        private void Result_TriangularPyramid(object sender, EventArgs e)
+        {
+            resultText.Text = TriangularPyramid.Volume(1, 1).ToString(); // TODO
+        }
     }
 }

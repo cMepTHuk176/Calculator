@@ -18,10 +18,20 @@ namespace Calculator
         {
             InitializeComponent();
         }
-         void phonesList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        void phonesList_ItemSelected(object sender, SelectedItemChangedEventArgs e) // ЭТО ШТО???
         {
             if (e.SelectedItem != null)
                 Selected = e.SelectedItem.ToString();
+        }
+
+        private async void Volume_Back(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        private void Result_Cone(object sender, EventArgs e)
+        {
+            resultText.Text = ConeVolume.Volume(1, 1).ToString(); // TODO
         }
     }
 }

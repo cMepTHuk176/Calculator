@@ -6,7 +6,7 @@ namespace Calculator
 {
     public abstract class Figure
     {
-        
+
     }
 
     

@@ -32,24 +32,24 @@ namespace Calculator
                     await Navigation.PushAsync(new sphere_volume());
                     break;
 
-                case "объем куба": // TODO
-
+                case "объем конуса":
+                    await Navigation.PushAsync(new cone_volume());
                     break;
 
-                case "объем параллепипеда": // TODO
-
+                case "объем параллепипеда":
+                    await Navigation.PushAsync(new parallelepiped_volume());
                     break;
 
-                case "объем квадратной пирамиды": // TODO
-
+                case "объем квадратной пирамиды":
+                    await Navigation.PushAsync(new square_pyramid_volume());
                     break;
 
-                case "объем треугольной пирамиды": // TODO
-
+                case "объем треугольной пирамиды":
+                    await Navigation.PushAsync(new triangular_pyramid_volume());
                     break;
 
-                case "объем цилиндра": // TODO
-
+                case "объем цилиндра":
+                    await Navigation.PushAsync(new cylinder_volume());
                     break;
             }
         }
