@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.PrGidro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+    <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
+
+
+        <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="6">
+            <Picker.Items>
+                <x:String>P=F/S</x:String>
+                <x:String>P=pgh</x:String>
+                <x:String>P=p0e^(-Mgh/RT)</x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry Placeholder="p" Grid.Row="2" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry Placeholder="g" Grid.Row="2" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry Placeholder="h" Grid.Row="2" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" />
+
+        <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0"  />
+
+        <Button Text="=" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="white" TextColor="Black"
+                FontSize="36" BorderRadius="0"  />
+        <Button Text="В калькулятор" Grid.Row="3" Grid.Column="5" BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="white" TextColor="Black"
+                FontSize="30" BorderRadius="0"  />    </Grid>
+</ContentPage>

@@ -14,14 +14,14 @@
     <FlyoutItem Title="калькулятор" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
     </FlyoutItem>
-    <FlyoutItem Title="дизайн обьём - шар" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
+    <FlyoutItem Title="P=F/S" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Pr}"/>
     </FlyoutItem>
-    <FlyoutItem Title="дизайн обьём - паралеллипипед" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page2}"/>
+    <FlyoutItem Title="P=pgh" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:PrGidro}"/>
     </FlyoutItem>
-    <FlyoutItem Title="дизайн обьём - Квадратная пирамида" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
+    <FlyoutItem Title="P=p0e^(-Mgh/RT)" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:PrAtm}"/>
     </FlyoutItem>
     <FlyoutItem Title="дизайн обьём - Конус" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page4}"/>

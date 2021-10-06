@@ -10,9 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class PrAtm : ContentPage
     {
-        public Page1()
+        void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //resultText.Text = "Вы выбрали: " + picker.Items[picker.SelectedIndex];
+        }
+        public PrAtm()
         {
             InitializeComponent();
         }
