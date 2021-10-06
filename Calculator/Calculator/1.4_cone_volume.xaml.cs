@@ -29,9 +29,24 @@ namespace Calculator
             await Navigation.PopAsync();
         }
 
+        private void OnClear(object sender, EventArgs e)
+        {
+            resultText.Text = "0";
+            TextCleaner.EntryClean(entry_R, entry_H);
+        }
+
         private void Result_Cone(object sender, EventArgs e)
         {
-            resultText.Text = ConeVolume.Volume(1, 1).ToString(); // TODO
+            if (!TextChecker.EntryCheck(entry_R, entry_H))
+            {
+                resultText.Text = Volume_Main.ERROR_TEXT;
+                return;
+            }
+
+            double valueR = double.Parse(entry_R.Text);
+            double valueH = double.Parse(entry_H.Text);
+
+            resultText.Text = Figure.ConeVolume(valueR, valueH).ToString();
         }
     }
 }

@@ -12,18 +12,18 @@ namespace Calculator
     public partial class Volume_Main : ContentPage
     {
         private string selected;
-        internal static readonly string ERROR = "ОШИБКА";
+        internal static readonly string ERROR_TEXT = "ОШИБКА";
 
         public Volume_Main()
         {
             InitializeComponent();
         }
 
-        async void figurelist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.SelectedItem != null)
+            if (e.Item != null)
             {
-                selected = e.SelectedItem.ToString();
+                selected = e.Item.ToString();
             }
 
             switch (selected)
@@ -52,6 +52,8 @@ namespace Calculator
                     await Navigation.PushAsync(new cylinder_volume());
                     break;
             }
+
+             ((ListView)sender).SelectedItem = null;
         }
 
 

@@ -22,9 +22,24 @@ namespace Calculator
             await Navigation.PopAsync();
         }
 
+        private void OnClear(object sender, EventArgs e)
+        {
+            resultText.Text = "0";
+            TextCleaner.EntryClean(entry_S, entry_H);
+        }
+
         private void Result_TriangularPyramid(object sender, EventArgs e)
         {
-            resultText.Text = TriangularPyramid.Volume(1, 1).ToString(); // TODO
+            if (!TextChecker.EntryCheck(entry_S, entry_H))
+            {
+                resultText.Text = Volume_Main.ERROR_TEXT;
+                return;
+            }
+
+            double valueS = double.Parse(entry_S.Text);
+            double valueH = double.Parse(entry_H.Text);
+
+            resultText.Text = Figure.TriangularPyramidVolume(valueS, valueH).ToString();
         }
     }
 }

@@ -22,9 +22,26 @@ namespace Calculator
             await Navigation.PopAsync();
         }
 
+        private void OnClear(object sender, EventArgs e)
+        {
+            resultText.Text = "0";
+            TextCleaner.EntryClean(entry_X, entry_Y, entry_Z);
+        }
+
         private void Result_Parallepiped(object sender, EventArgs e)
         {
-            resultText.Text = Parallepiped.Volume(1, 1, 1).ToString(); // TODO
+            if (!TextChecker.EntryCheck(entry_X, entry_Y, entry_Z))
+            {
+                resultText.Text = Volume_Main.ERROR_TEXT;
+                return;
+            }
+
+            double valueX = double.Parse(entry_X.Text);
+            double valueY = double.Parse(entry_Y.Text);
+            double valueZ = double.Parse(entry_Z.Text);
+
+            resultText.Text = Figure.ParallepipedVolume(valueX, valueY, valueZ).ToString();
+
         }
     }
 }

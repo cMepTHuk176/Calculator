@@ -24,17 +24,24 @@ namespace Calculator
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            entryText_R.Text = default;
+            TextCleaner.EntryClean(entryText_R);
         }
         
         private void Result_Sphere(object sender, EventArgs e)
         {
-            double result = 0;
+            if (!TextChecker.EntryCheck(entryText_R))
+            {
+                resultText.Text = Volume_Main.ERROR_TEXT;
+                return;
+            }
 
-            if (double.TryParse(entryText_R.Text, out result))
-                resultText.Text = Sphere.Volume(result).ToString();
-            else
-                resultText.Text = Volume_Main.ERROR;
+            double valueR = double.Parse(entryText_R.Text);
+            resultText.Text = Figure.SphereVolume(valueR).ToString();
+
+            //if (double.TryParse(entryText_R.Text, out double result))
+            //    resultText.Text = Figure.SphereVolume(result).ToString();
+            //else
+            //    resultText.Text = Volume_Main.ERROR_TEXT;
         }
     }
 }

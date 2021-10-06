@@ -18,6 +18,6 @@
         <Label Text="Выберите фигуру для нахождения объема"
                 HorizontalOptions="Center" FontSize="Large" />
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
-                  ItemSelected="figurelist_ItemSelected"/>
+                  ItemTapped="figurelist_ItemTapped"/>
     </StackLayout>
 </ContentPage>
