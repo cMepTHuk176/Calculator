@@ -32,7 +32,7 @@
               TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <Entry Placeholder="x0" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry Placeholder="x0" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" TextChanged="x0_TextChanged" />
         <Entry Placeholder="Vx" Grid.Row="2" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
         <Entry Placeholder="t" Grid.Row="3" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
 
