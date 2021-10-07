@@ -12,8 +12,7 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class cone_volume : ContentPage
     {
-        string Selected;
-
+        
         public cone_volume()
         {
             InitializeComponent();
