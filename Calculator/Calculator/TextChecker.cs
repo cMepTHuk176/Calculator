@@ -7,6 +7,7 @@ namespace Calculator
 {
     public static class TextChecker
     {
+        // проверяет начилие значения в Entry
         public static bool EntryCheck(params Entry[] entries)
         {
             foreach (var item in entries)
@@ -14,6 +15,15 @@ namespace Calculator
                     return false;
 
             return true;
+        }
+    }
+    public static class TextCleaner
+    {
+        // стирает Entry
+        public static void EntryClean(params Entry[] entries)
+        {
+            foreach (var item in entries)
+                item.Text = default;
         }
     }
 }
