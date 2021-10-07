@@ -20,7 +20,7 @@
     <FlyoutItem Title="пропорция" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
     </FlyoutItem>
-    <FlyoutItem Title="тида" Icon="xamarin.png">
+    <FlyoutItem Title="Уравнение прямолинейного равномерного движения по x" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page4}"/>
     </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
