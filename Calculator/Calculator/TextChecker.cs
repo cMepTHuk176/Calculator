@@ -7,7 +7,7 @@ namespace Calculator
 {
     public static class TextChecker
     {
-        // проверяет начилие значения в Entry
+        // проверяет начилие возможности преобразования значения в каждом Entry
         public static bool EntryCheck(params Entry[] entries)
         {
             foreach (var item in entries)
@@ -19,7 +19,7 @@ namespace Calculator
     }
     public static class TextCleaner
     {
-        // стирает Entry
+        // стирает значение в каждом Entry
         public static void EntryClean(params Entry[] entries)
         {
             foreach (var item in entries)
