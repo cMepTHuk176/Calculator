@@ -14,6 +14,7 @@ namespace Calculator
         public sphere_volume()
         {
             InitializeComponent();
+            lengthPicker.SelectedIndex = 0;
         }
 
         private async void Volume_Back(object sender, EventArgs e)
@@ -38,10 +39,6 @@ namespace Calculator
             double valueR = double.Parse(entryText_R.Text);
             resultText.Text = Figure.SphereVolume(valueR).ToString();
 
-            //if (double.TryParse(entryText_R.Text, out double result))
-            //    resultText.Text = Figure.SphereVolume(result).ToString();
-            //else
-            //    resultText.Text = Volume_Main.ERROR_TEXT;
         }
     }
 }
