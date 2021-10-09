@@ -50,7 +50,9 @@
         <Picker x:Name="lengthPicker" Grid.Row="1" Grid.Column="6">
             <Picker.Items>
                 <x:String>м</x:String>
+                <x:String>дм</x:String>
                 <x:String>см</x:String>
+                <x:String>мм</x:String>
             </Picker.Items>
         </Picker>
 

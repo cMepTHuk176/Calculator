@@ -8,6 +8,11 @@ using Xamarin.Forms.Xaml;
 
 namespace Calculator
 {
+    internal enum LengthPickerState
+    {
+        м = 0, дм = 1, см = 2, мм = 3
+    }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class sphere_volume : ContentPage
     {
@@ -27,7 +32,7 @@ namespace Calculator
             resultText.Text = "0";
             TextCleaner.EntryClean(entryText_R);
         }
-        
+
         private void Result_Sphere(object sender, EventArgs e)
         {
             if (!TextChecker.EntryCheck(entryText_R))
@@ -37,7 +42,13 @@ namespace Calculator
             }
 
             double valueR = double.Parse(entryText_R.Text);
-            resultText.Text = Figure.SphereVolume(valueR).ToString();
+
+            if (Figure.SphereVolume(valueR) > 1000 || Figure.SphereVolume(valueR) < 0.01)
+                resultText.Text = Figure.SphereVolume(valueR).ToString("0.000e+0") + " "
+                    + (LengthPickerState)lengthPicker.SelectedIndex;
+            else
+                resultText.Text = Figure.SphereVolume(valueR).ToString("f4") + " "
+                    + (LengthPickerState)lengthPicker.SelectedIndex;
 
         }
     }
