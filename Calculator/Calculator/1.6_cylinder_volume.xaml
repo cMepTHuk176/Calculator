@@ -32,8 +32,10 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
  
 
-        <Entry x:Name="entry_R" Placeholder="R" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" />
-        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
+        <Entry x:Name="entry_R" Placeholder="R" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" 
+               MaxLength="8"/>
+        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" 
+               MaxLength="8"/>
 
 
         <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6"

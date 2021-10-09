@@ -45,10 +45,10 @@ namespace Calculator
 
             if (Figure.SphereVolume(valueR) > 1000 || Figure.SphereVolume(valueR) < 0.01)
                 resultText.Text = Figure.SphereVolume(valueR).ToString("0.000e+0") + " "
-                    + (LengthPickerState)lengthPicker.SelectedIndex;
+                    + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
             else
                 resultText.Text = Figure.SphereVolume(valueR).ToString("f4") + " "
-                    + (LengthPickerState)lengthPicker.SelectedIndex;
+                    + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
 
         }
     }

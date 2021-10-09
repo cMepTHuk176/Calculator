@@ -12,6 +12,7 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class parallelepiped_volume : ContentPage
     {
+
         public parallelepiped_volume()
         {
             InitializeComponent();

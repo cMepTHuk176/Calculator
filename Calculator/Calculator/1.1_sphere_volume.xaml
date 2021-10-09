@@ -32,7 +32,8 @@
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="7" />
 
-        <Entry x:Name="entryText_R" Placeholder="R" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="6" />
+        <Entry x:Name="entryText_R" Placeholder="R" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="6" 
+               MaxLength="15"/>
 
         <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"

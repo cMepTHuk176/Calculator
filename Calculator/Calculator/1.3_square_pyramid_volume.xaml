@@ -34,9 +34,12 @@
 
         
 
-        <Entry x:Name="entry_A" Placeholder="A" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="entry_B" Placeholder="B" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry x:Name="entry_A" Placeholder="A" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2" 
+               MaxLength="4"/>
+        <Entry x:Name="entry_B" Placeholder="B" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" 
+               MaxLength="4"/>
+        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" 
+               MaxLength="4"/>
 
 
 

@@ -32,9 +32,12 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
 
 
-        <Entry x:Name="entry_X" Placeholder="X" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="entry_Y" Placeholder="Y" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="entry_Z" Placeholder="Z" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry x:Name="entry_X" Placeholder="X" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2"
+               MaxLength="4"/>
+        <Entry x:Name="entry_Y" Placeholder="Y" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" 
+               MaxLength="4"/>
+        <Entry x:Name="entry_Z" Placeholder="Z" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" 
+               MaxLength="4"/>
 
 
 
