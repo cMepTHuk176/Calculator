@@ -5,8 +5,17 @@ using Xamarin.Forms;
 
 namespace Calculator
 {
+    /// <summary>
+    /// Класс-конвертер, преобразующий различные величины
+    /// </summary>
     public static class Converter
     {
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="resultPicker">Параметр, к единице измерения которого должен быть приведен результат</param>
+        /// <param name="pickers">Все сравниваемые значения</param>
+        /// <returns>Множитель дальнейшего результата</returns>
         public static double ConvertToLength(Picker resultPicker, params Picker[] pickers)
         {
             double multiplier = 1;
