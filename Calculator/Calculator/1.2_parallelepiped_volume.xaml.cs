@@ -12,10 +12,19 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class parallelepiped_volume : ContentPage
     {
-
         public parallelepiped_volume()
         {
             InitializeComponent();
+
+            resultLengthPicker.Items.Add("м\u00B3");
+            resultLengthPicker.Items.Add("дм\u00B3");
+            resultLengthPicker.Items.Add("см\u00B3");
+            resultLengthPicker.Items.Add("мм\u00B3");
+
+            lengthPickerX.SelectedIndex = 0;
+            lengthPickerY.SelectedIndex = 0;
+            lengthPickerZ.SelectedIndex = 0;
+            resultLengthPicker.SelectedIndex = 0;
         }
 
         private async void Volume_Back(object sender, EventArgs e)
@@ -41,8 +50,14 @@ namespace Calculator
             double valueY = double.Parse(entry_Y.Text);
             double valueZ = double.Parse(entry_Z.Text);
 
-            resultText.Text = Figure.ParallepipedVolume(valueX, valueY, valueZ).ToString();
+            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerX, lengthPickerY,
+                lengthPickerZ) * Figure.ParallepipedVolume(valueX, valueY, valueZ);
 
+            if (result > 1000 || result < 0.01)
+                resultText.Text = result.ToString("0.000e+0");
+            else
+                resultText.Text = result.ToString();
+            
         }
     }
 }

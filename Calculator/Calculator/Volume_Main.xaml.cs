@@ -8,6 +8,11 @@ using Xamarin.Forms.Xaml;
 
 namespace Calculator
 {
+    internal enum LengthPickerState
+    {
+        м = 0, дм = 1, см = 2, мм = 3
+    }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
