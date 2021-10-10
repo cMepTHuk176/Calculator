@@ -20,6 +20,9 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="equidistant_motion.xaml.cs">
+      <DependentUpon>equidistant_motion.xaml</DependentUpon>
+    </Compile>
     <Compile Update="TextCleaner.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>

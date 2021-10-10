@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page4 : ContentPage
+    public partial class equidistant_motion : ContentPage
     {
-        public Page4()
+        public equidistant_motion()
         {
             InitializeComponent();
         }
