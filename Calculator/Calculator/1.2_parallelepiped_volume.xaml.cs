@@ -12,6 +12,7 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class parallelepiped_volume : ContentPage
     {
+
         public parallelepiped_volume()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Calculator
             lengthPickerY.SelectedIndex = 0;
             lengthPickerZ.SelectedIndex = 0;
             resultLengthPicker.SelectedIndex = 0;
+
         }
 
         private async void Volume_Back(object sender, EventArgs e)
@@ -37,6 +39,13 @@ namespace Calculator
             resultText.Text = "0";
             TextCleaner.EntryClean(entry_X, entry_Y, entry_Z);
         }
+
+        private void OnIndexChanged(object sender, EventArgs e)
+        {
+            if (TextChecker.EntryCheck(entry_X, entry_Y, entry_Z))
+                Result_Parallepiped(null, null);
+        }
+
 
         private void Result_Parallepiped(object sender, EventArgs e)
         {
@@ -53,10 +62,12 @@ namespace Calculator
             double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerX, lengthPickerY,
                 lengthPickerZ) * Figure.ParallepipedVolume(valueX, valueY, valueZ);
 
-            if (result > 1000 || result < 0.01)
-                resultText.Text = result.ToString("0.000e+0");
+            if (result is > 1000 or < 0.01)
+                resultText.Text = result.ToString("0.000e+0") + " " +
+                    (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             else
-                resultText.Text = result.ToString();
+                resultText.Text = result.ToString() + " " +
+                    (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             
         }
     }
