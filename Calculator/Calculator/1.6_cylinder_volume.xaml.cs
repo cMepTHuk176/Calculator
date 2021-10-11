@@ -15,6 +15,8 @@ namespace Calculator
         {
             InitializeComponent();
 
+            
+
             resultLengthPicker.Items.Add("м\u00B3");
             resultLengthPicker.Items.Add("дм\u00B3");
             resultLengthPicker.Items.Add("см\u00B3");
