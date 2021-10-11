@@ -15,6 +15,15 @@ namespace Calculator
         public triangular_pyramid_volume()
         {
             InitializeComponent();
+
+            resultLengthPicker.Items.Add("м\u00B3");
+            resultLengthPicker.Items.Add("дм\u00B3");
+            resultLengthPicker.Items.Add("см\u00B3");
+            resultLengthPicker.Items.Add("мм\u00B3");
+
+            resultLengthPicker.SelectedIndex = 0;
+            lengthPickerS.SelectedIndex = 0;
+            lengthPickerH.SelectedIndex = 0;
         }
 
         private async void Volume_Back(object sender, EventArgs e)
@@ -28,6 +37,12 @@ namespace Calculator
             TextCleaner.EntryClean(entry_S, entry_H);
         }
 
+        private void OnIndexChanged(object sender, EventArgs e)
+        {
+            if (TextChecker.EntryCheck(entry_S, entry_H))
+                Result_TriangularPyramid(null, null);
+        }
+
         private void Result_TriangularPyramid(object sender, EventArgs e)
         {
             if (!TextChecker.EntryCheck(entry_S, entry_H))
@@ -39,7 +54,15 @@ namespace Calculator
             double valueS = double.Parse(entry_S.Text);
             double valueH = double.Parse(entry_H.Text);
 
-            resultText.Text = Figure.TriangularPyramidVolume(valueS, valueH).ToString();
+            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerS, lengthPickerH)
+                * Figure.TriangularPyramidVolume(valueS, valueH);
+
+            if (result is > 1000 or < 0.01)
+                resultText.Text = result.ToString("0.00E+0") + " "
+                    + (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
+            else
+                resultText.Text = result.ToString("N3") + " "
+                    + (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
         }
     }
 }

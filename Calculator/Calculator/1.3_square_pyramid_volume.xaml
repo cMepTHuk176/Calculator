@@ -25,34 +25,74 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
+              LineBreakMode="NoWrap" Grid.ColumnSpan="9" />
 
+        <RelativeLayout>
+            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="50" WidthRequest="75"
+                Background="Silver" HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="Small" 
+                    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, 
+                Factor=0.25, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                Property=Width, Factor=0.25, Constant=5}">
+
+            </Picker>
+        </RelativeLayout>
+
+        <Entry x:Name="entry_A" Placeholder="A" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" 
+               MaxLength="4"/>
+        <Entry x:Name="entry_B" Placeholder="B" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" 
+               MaxLength="4"/>
+        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="6" FontSize="36" Grid.ColumnSpan="3" 
+               MaxLength="4"/>
 
         
+            <Picker x:Name="lengthPickerA" Grid.Row="1" Grid.Column="2" BackgroundColor="Silver" 
+                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                <Picker.Items>
+                    <x:String>м</x:String>
+                    <x:String>дм</x:String>
+                    <x:String>см</x:String>
+                    <x:String>мм</x:String>
+                </Picker.Items>
+            </Picker>
 
-        <Entry x:Name="entry_A" Placeholder="A" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="2" 
-               MaxLength="4"/>
-        <Entry x:Name="entry_B" Placeholder="B" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" 
-               MaxLength="4"/>
-        <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="2" 
-               MaxLength="4"/>
+            <Picker x:Name="lengthPickerB" Grid.Row="1" Grid.Column="5" BackgroundColor="Silver" 
+                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                <Picker.Items>
+                    <x:String>м</x:String>
+                    <x:String>дм</x:String>
+                    <x:String>см</x:String>
+                    <x:String>мм</x:String>
+                </Picker.Items>
+            </Picker>
 
+            <Picker x:Name="lengthPickerH" Grid.Row="1" Grid.Column="8" BackgroundColor="Silver" 
+                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                <Picker.Items>
+                    <x:String>м</x:String>
+                    <x:String>дм</x:String>
+                    <x:String>см</x:String>
+                    <x:String>мм</x:String>
+                </Picker.Items>
+            </Picker>
+            
 
-
-        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6"
+        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="9"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="36" BorderRadius="0" Clicked="Volume_Back" />
 
 
-        <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="36" BorderRadius="0" Clicked="OnClear" />
 
-        <Button Text="=" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="=" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="6" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
                 FontSize="36" BorderRadius="0" Clicked="Result_Pyramid" />
 

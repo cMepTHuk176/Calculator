@@ -39,10 +39,10 @@ namespace Calculator
             double valueR = double.Parse(entryText_R.Text);
 
             if (Figure.SphereVolume(valueR) is > 1000 or < 0.01)
-                resultText.Text = Figure.SphereVolume(valueR).ToString("0.000e+0") + " "
+                resultText.Text = Figure.SphereVolume(valueR).ToString("0.00E+0") + " "
                     + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
             else
-                resultText.Text = Figure.SphereVolume(valueR).ToString("f4") + " "
+                resultText.Text = Figure.SphereVolume(valueR).ToString("N3") + " "
                     + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
 
         }
