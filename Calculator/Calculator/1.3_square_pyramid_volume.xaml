@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.square_pyramid_volume">
+             x:Class="Calculator.square_pyramid_volume"
+             Title="Объем прямоугольной пирамиды">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
@@ -35,7 +36,7 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="9" />
 
         <RelativeLayout>
-            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="50" WidthRequest="75"
+            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="50"
                 Background="Silver" HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="Small" 
                     RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, 
                 Factor=0.25, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
@@ -53,7 +54,7 @@
 
         
             <Picker x:Name="lengthPickerA" Grid.Row="1" Grid.Column="2" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
                 <Picker.Items>
                     <x:String>м</x:String>
                     <x:String>дм</x:String>
@@ -63,7 +64,7 @@
             </Picker>
 
             <Picker x:Name="lengthPickerB" Grid.Row="1" Grid.Column="5" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
                 <Picker.Items>
                     <x:String>м</x:String>
                     <x:String>дм</x:String>
@@ -73,7 +74,7 @@
             </Picker>
 
             <Picker x:Name="lengthPickerH" Grid.Row="1" Grid.Column="8" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
                 <Picker.Items>
                     <x:String>м</x:String>
                     <x:String>дм</x:String>

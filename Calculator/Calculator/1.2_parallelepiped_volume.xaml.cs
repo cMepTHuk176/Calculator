@@ -62,13 +62,14 @@ namespace Calculator
             double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerX, lengthPickerY,
                 lengthPickerZ) * Figure.ParallepipedVolume(valueX, valueY, valueZ);
 
+
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " " +
                     (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             else
                 resultText.Text = result.ToString("N3") + " " +
                     (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
-            
+
         }
     }
 }

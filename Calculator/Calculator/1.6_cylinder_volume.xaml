@@ -35,7 +35,7 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="8" />
 
         <RelativeLayout>
-            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="50" WidthRequest="75"
+            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="50"
                 Background="Silver" HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="Small" 
                     RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, 
                 Factor=0.25, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
@@ -51,7 +51,7 @@
                MaxLength="8"/>
 
         <Picker x:Name="lengthPickerR" Grid.Row="1" Grid.Column="3" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
             <Picker.Items>
                 <x:String>м</x:String>
                 <x:String>дм</x:String>
@@ -61,7 +61,7 @@
         </Picker>
 
         <Picker x:Name="lengthPickerH" Grid.Row="1" Grid.Column="7" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="11">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
             <Picker.Items>
                 <x:String>м</x:String>
                 <x:String>дм</x:String>

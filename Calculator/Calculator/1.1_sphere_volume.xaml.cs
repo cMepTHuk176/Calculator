@@ -14,6 +14,13 @@ namespace Calculator
         public sphere_volume()
         {
             InitializeComponent();
+
+            resultLengthPicker.Items.Add("м\u00B3");
+            resultLengthPicker.Items.Add("дм\u00B3");
+            resultLengthPicker.Items.Add("см\u00B3");
+            resultLengthPicker.Items.Add("мм\u00B3");
+
+            resultLengthPicker.SelectedIndex = 0;
             lengthPicker.SelectedIndex = 0;
         }
 
@@ -28,6 +35,12 @@ namespace Calculator
             TextCleaner.EntryClean(entryText_R);
         }
 
+        private void OnIndexChanged(object sender, EventArgs e)
+        {
+            if (TextChecker.EntryCheck(entryText_R))
+                Result_Sphere(null, null);
+        }
+
         private void Result_Sphere(object sender, EventArgs e)
         {
             if (!TextChecker.EntryCheck(entryText_R))
@@ -38,11 +51,14 @@ namespace Calculator
 
             double valueR = double.Parse(entryText_R.Text);
 
-            if (Figure.SphereVolume(valueR) is > 1000 or < 0.01)
-                resultText.Text = Figure.SphereVolume(valueR).ToString("0.00E+0") + " "
+            double result = Converter.ConvertToLength(resultLengthPicker, lengthPicker)
+                * Figure.SphereVolume(valueR);
+
+            if (result is > 1000 or < 0.01)
+                resultText.Text = result.ToString("0.00E+0") + " "
                     + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
             else
-                resultText.Text = Figure.SphereVolume(valueR).ToString("N3") + " "
+                resultText.Text = result.ToString("N3") + " "
                     + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
 
         }
