@@ -6,8 +6,9 @@ using Xamarin.Forms;
 namespace Calculator
 {
     public static class TextChecker
-    {
-        // проверяет начилие возможности преобразования значения в каждом Entry
+    {/// <summary>
+     /// проверяет начилие возможности преобразования значения в каждом Entry
+     /// </summary>
         public static bool EntryCheck(params Entry[] entries)
         {
             foreach (var item in entries)
@@ -19,7 +20,9 @@ namespace Calculator
     }
     public static class TextCleaner
     {
-        // стирает значение в каждом Entry
+        /// <summary>
+        ///  стирает значение в каждом Entry
+        /// </summary>
         public static void EntryClean(params Entry[] entries)
         {
             foreach (var item in entries)
