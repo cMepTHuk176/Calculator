@@ -49,17 +49,17 @@ namespace Calculator
                 return;
             }
 
-            double valueR = double.Parse(entryText_R.Text);
+            double valueR = Converter.ConvertToLength(resultLengthPicker, lengthPicker) *
+                double.Parse(entryText_R.Text);
 
-            double result = Converter.ConvertToLength(resultLengthPicker, lengthPicker)
-                * Figure.SphereVolume(valueR);
+            double result = Figure.SphereVolume(valueR);
 
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " "
-                    + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
+                    + (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             else
                 resultText.Text = result.ToString("N3") + " "
-                    + (LengthPickerState)lengthPicker.SelectedIndex + string.Format("\u00B3");
+                    + (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
 
         }
     }

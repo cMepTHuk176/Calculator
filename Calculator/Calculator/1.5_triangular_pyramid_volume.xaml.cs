@@ -51,11 +51,10 @@ namespace Calculator
                 return;
             }
 
-            double valueS = double.Parse(entry_S.Text);
-            double valueH = double.Parse(entry_H.Text);
+            double valueS = Converter.ConvertToLength(resultLengthPicker, lengthPickerS) * double.Parse(entry_S.Text);
+            double valueH = Converter.ConvertToLength(resultLengthPicker, lengthPickerH) * double.Parse(entry_H.Text);
 
-            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerS, lengthPickerH)
-                * Figure.TriangularPyramidVolume(valueS, valueH);
+            double result = Figure.TriangularPyramidVolume(valueS, valueH);
 
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " "

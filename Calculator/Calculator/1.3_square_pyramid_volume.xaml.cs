@@ -52,12 +52,11 @@ namespace Calculator
                 return;
             }
 
-            double valueA = double.Parse(entry_A.Text);
-            double valueB = double.Parse(entry_B.Text);
-            double valueH = double.Parse(entry_H.Text);
+            double valueA = Converter.ConvertToLength(resultLengthPicker, lengthPickerA) * double.Parse(entry_A.Text);
+            double valueB = Converter.ConvertToLength(resultLengthPicker, lengthPickerB) * double.Parse(entry_B.Text);
+            double valueH = Converter.ConvertToLength(resultLengthPicker, lengthPickerH) * double.Parse(entry_H.Text);
 
-            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerA, lengthPickerB,
-                lengthPickerH) * Figure.SquarePyramidVolume(valueA, valueB, valueH);
+            double result = Figure.SquarePyramidVolume(valueA, valueB, valueH);
 
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " " +

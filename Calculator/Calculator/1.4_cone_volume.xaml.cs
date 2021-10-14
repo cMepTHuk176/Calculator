@@ -50,11 +50,10 @@ namespace Calculator
                 return;
             }
 
-            double valueR = double.Parse(entry_R.Text);
-            double valueH = double.Parse(entry_H.Text);
+            double valueR = Converter.ConvertToLength(resultLengthPicker, lengthPickerR) * double.Parse(entry_R.Text);
+            double valueH = Converter.ConvertToLength(resultLengthPicker, lengthPickerR) * double.Parse(entry_H.Text);
 
-            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerR, lengthPickerH)
-                * Figure.ConeVolume(valueR, valueH);
+            double result = Figure.ConeVolume(valueR, valueH);
 
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " " +

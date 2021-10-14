@@ -35,22 +35,22 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="8" />
 
         <RelativeLayout>
-            <Picker x:Name="resultLengthPicker" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="65"
-                Background="Silver" HorizontalTextAlignment="Start" SelectedIndexChanged="OnIndexChanged" FontSize="Small" 
+            <Picker x:Name="resultLengthPicker" HeightRequest="40" WidthRequest="50" Background="Silver"
+                    HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="Small" 
                     RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, 
-                Factor=0.5, Constant=75}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                Factor=0.25, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                 Property=Width, Factor=0.25, Constant=5}">
 
             </Picker>
         </RelativeLayout>
 
         <Entry x:Name="entry_S" Placeholder="S" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" 
-               MaxLength="8"/>
+               MaxLength="6"/>
         <Entry x:Name="entry_H" Placeholder="H" Grid.Row="1" Grid.Column="4" FontSize="36" Grid.ColumnSpan="3" 
-               MaxLength="8"/>
+               MaxLength="6"/>
 
         <Picker x:Name="lengthPickerS" Grid.Row="1" Grid.Column="3" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="36">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
             <Picker.Items>
                 <x:String>м</x:String>
                 <x:String>дм</x:String>
@@ -60,7 +60,7 @@
         </Picker>
 
         <Picker x:Name="lengthPickerH" Grid.Row="1" Grid.Column="7" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="36">
+                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
             <Picker.Items>
                 <x:String>м</x:String>
                 <x:String>дм</x:String>

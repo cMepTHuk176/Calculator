@@ -27,10 +27,6 @@ namespace Calculator
                     {
                         switch ((LengthPickerState)item.SelectedIndex)
                         {
-                            case LengthPickerState.м:
-                                multiplier *= 1;
-                                break;
-
                             case LengthPickerState.дм:
                                 multiplier *= 0.1;
                                 break;
@@ -56,10 +52,6 @@ namespace Calculator
                                 multiplier *= 10;
                                 break;
 
-                            case LengthPickerState.дм:
-                                multiplier *= 1;
-                                break;
-
                             case LengthPickerState.см:
                                 multiplier *= 0.1;
                                 break;
@@ -68,11 +60,12 @@ namespace Calculator
                                 multiplier *= 0.01;
                                 break;
                         }
+
                     }
                     break;
 
                 case LengthPickerState.см:
-                    foreach(var item in pickers)
+                    foreach (var item in pickers)
                     {
                         switch ((LengthPickerState)item.SelectedIndex)
                         {
@@ -82,10 +75,6 @@ namespace Calculator
 
                             case LengthPickerState.дм:
                                 multiplier *= 10;
-                                break;
-
-                            case LengthPickerState.см:
-                                multiplier *= 1;
                                 break;
 
                             case LengthPickerState.мм:
@@ -111,11 +100,8 @@ namespace Calculator
                             case LengthPickerState.см:
                                 multiplier *= 10;
                                 break;
-
-                            case LengthPickerState.мм:
-                                multiplier *= 1;
-                                break;
                         }
+
                     }
                     break;
             }

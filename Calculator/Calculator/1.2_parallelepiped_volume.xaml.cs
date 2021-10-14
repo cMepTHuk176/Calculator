@@ -55,13 +55,11 @@ namespace Calculator
                 return;
             }
 
-            double valueX = double.Parse(entry_X.Text);
-            double valueY = double.Parse(entry_Y.Text);
-            double valueZ = double.Parse(entry_Z.Text);
+            double valueX = Converter.ConvertToLength(resultLengthPicker, lengthPickerX) * double.Parse(entry_X.Text);
+            double valueY = Converter.ConvertToLength(resultLengthPicker, lengthPickerY) * double.Parse(entry_Y.Text);
+            double valueZ = Converter.ConvertToLength(resultLengthPicker, lengthPickerZ) * double.Parse(entry_Z.Text);
 
-            double result = Converter.ConvertToLength(resultLengthPicker, lengthPickerX, lengthPickerY,
-                lengthPickerZ) * Figure.ParallepipedVolume(valueX, valueY, valueZ);
-
+            double result = Figure.ParallepipedVolume(valueX, valueY, valueZ);
 
             if (result is > 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " " +
