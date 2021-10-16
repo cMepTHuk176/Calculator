@@ -58,7 +58,7 @@ namespace Calculator
 
             double result = Figure.SquarePyramidVolume(valueA, valueB, valueH);
 
-            if (result is > 1000 or < 0.01)
+            if (result is >= 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " " +
                     (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             else

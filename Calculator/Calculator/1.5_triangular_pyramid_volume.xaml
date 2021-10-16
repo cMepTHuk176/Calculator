@@ -51,12 +51,6 @@
 
         <Picker x:Name="lengthPickerS" Grid.Row="1" Grid.Column="3" BackgroundColor="Silver" 
                 HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
-            <Picker.Items>
-                <x:String>м</x:String>
-                <x:String>дм</x:String>
-                <x:String>см</x:String>
-                <x:String>мм</x:String>
-            </Picker.Items>
         </Picker>
 
         <Picker x:Name="lengthPickerH" Grid.Row="1" Grid.Column="7" BackgroundColor="Silver" 

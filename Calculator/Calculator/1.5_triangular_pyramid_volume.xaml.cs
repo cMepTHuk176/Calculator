@@ -21,6 +21,11 @@ namespace Calculator
             resultLengthPicker.Items.Add("см\u00B3");
             resultLengthPicker.Items.Add("мм\u00B3");
 
+            lengthPickerS.Items.Add("м\u00B2");
+            lengthPickerS.Items.Add("дм\u00B2");
+            lengthPickerS.Items.Add("см\u00B2");
+            lengthPickerS.Items.Add("мм\u00B2");
+
             resultLengthPicker.SelectedIndex = 0;
             lengthPickerS.SelectedIndex = 0;
             lengthPickerH.SelectedIndex = 0;
@@ -51,12 +56,13 @@ namespace Calculator
                 return;
             }
 
-            double valueS = Converter.ConvertToLength(resultLengthPicker, lengthPickerS) * double.Parse(entry_S.Text);
+            double valueS = Math.Pow(Converter.ConvertToLength(resultLengthPicker, lengthPickerS), 2)
+                * double.Parse(entry_S.Text);
             double valueH = Converter.ConvertToLength(resultLengthPicker, lengthPickerH) * double.Parse(entry_H.Text);
 
             double result = Figure.TriangularPyramidVolume(valueS, valueH);
 
-            if (result is > 1000 or < 0.01)
+            if (result is >= 1000 or < 0.01)
                 resultText.Text = result.ToString("0.00E+0") + " "
                     + (LengthPickerState)resultLengthPicker.SelectedIndex + string.Format("\u00B3");
             else
