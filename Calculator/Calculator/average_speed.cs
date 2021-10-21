@@ -21,29 +21,26 @@ namespace Calculator
 
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(S, t))
-                Result_Cylinder(null, null);
+            if (!TextChecker.EntryCheck(S, t))
+            {
+                resultText.Text = mechanic_main.ErrorText;
+                return;
+            }
         }
 
         private void Result_averageSpeed(object sender, EventArgs e)
         {
             if (!TextChecker.EntryCheck(S, t))
             {
-                resultText.Text = Volume_Main.ERROR_TEXT;
+                resultText.Text = mechanic_main.ERROR_TEXT;
                 return;
             }
 
             double valueS = double.Parse(S.Text);
             double valuet = double.Parse(t.Text);
 
-            resultText.Text = AverageSpeed(valueS, valuet).ToString();
+            double result = Mechanic.AverageSpeed(valueS, valuet);
         }
 
-        private double AverageSpeed(double valueS, double valuet)
-        {
-            double resultMove;
-            resultMove = valueS/valuet;
-            return resultMove;
-        }
     }
 }

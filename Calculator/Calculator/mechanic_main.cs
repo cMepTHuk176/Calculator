@@ -11,8 +11,8 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class mechanic_main : ContentPage
     {
-        private string selected;
-        internal static readonly string ERROR_TEXT = "ОШИБКА";
+        private string _selected;
+        internal static readonly string ErrorText = "ОШИБКА";
 
         public mechanic_main()
         {
@@ -23,10 +23,10 @@ namespace Calculator
         {
             if (e.Item != null)
             {
-                selected = e.Item.ToString();
+                _selected = e.Item.ToString();
             }
 
-            switch (selected)
+            switch (_selected)
             {
                 case "средняя скорость":
                     await Navigation.PushAsync(new average_speed());
