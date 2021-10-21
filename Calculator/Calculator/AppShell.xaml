@@ -17,6 +17,9 @@
     <FlyoutItem Title="динамическая страница" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
     </FlyoutItem>
+     <FlyoutItem Title="Меню механики" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:mechanic_main}"/>
+    </FlyoutItem>
     <FlyoutItem Title="пропорция" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
     </FlyoutItem>

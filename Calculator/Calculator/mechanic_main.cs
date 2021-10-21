@@ -9,17 +9,17 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Volume_Main : ContentPage
+    public partial class mechanic_main : ContentPage
     {
         private string selected;
         internal static readonly string ERROR_TEXT = "ОШИБКА";
 
-        public Volume_Main()
+        public mechanic_main()
         {
             InitializeComponent();
         }
 
-        async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void mechaniclist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item != null)
             {
@@ -28,29 +28,10 @@ namespace Calculator
 
             switch (selected)
             {
-                case "объем сферы":
-                    await Navigation.PushAsync(new sphere_volume());
+                case "средняя скорость":
+                    await Navigation.PushAsync(new average_speed());
                     break;
 
-                case "объем конуса":
-                    await Navigation.PushAsync(new cone_volume());
-                    break;
-
-                case "объем параллепипеда":
-                    await Navigation.PushAsync(new parallelepiped_volume());
-                    break;
-
-                case "объем квадратной пирамиды":
-                    await Navigation.PushAsync(new square_pyramid_volume());
-                    break;
-
-                case "объем треугольной пирамиды":
-                    await Navigation.PushAsync(new triangular_pyramid_volume());
-                    break;
-
-                case "объем цилиндра":
-                    await Navigation.PushAsync(new cylinder_volume());
-                    break;
             }
 
              ((ListView)sender).SelectedItem = null;
