@@ -10,14 +10,17 @@ namespace Calculator
 {
     internal enum LengthPickerState
     {
-        м = 0, дм = 1, см = 2, мм = 3
+        м = 0,
+        дм = 1,
+        см = 2,
+        мм = 3
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
-        private string selected;
-        internal static readonly string ERROR_TEXT = "ОШИБКА";
+        private string _selected;
+        internal static readonly string ErrorText = "ОШИБКА";
 
         public Volume_Main()
         {
@@ -28,39 +31,23 @@ namespace Calculator
         {
             if (e.Item != null)
             {
-                selected = e.Item.ToString();
+                _selected = e.Item.ToString();
             }
 
-            switch (selected)
+            Page pageToGo = _selected switch
             {
-                case "объем сферы":
-                    await Navigation.PushAsync(new sphere_volume());
-                    break;
+                "объем сферы" => new sphere_volume(),
+                "объем конуса" => new cone_volume(),
+                "объем параллепипеда" => new parallelepiped_volume(),
+                "объем квадратной пирамиды" => new square_pyramid_volume(),
+                "объем треугольной пирамиды" => new triangular_pyramid_volume(),
+                "объем цилиндра" => new cylinder_volume()
+            };
 
-                case "объем конуса":
-                    await Navigation.PushAsync(new cone_volume());
-                    break;
+            await Navigation.PushAsync(pageToGo);
 
-                case "объем параллепипеда":
-                    await Navigation.PushAsync(new parallelepiped_volume());
-                    break;
-
-                case "объем квадратной пирамиды":
-                    await Navigation.PushAsync(new square_pyramid_volume());
-                    break;
-
-                case "объем треугольной пирамиды":
-                    await Navigation.PushAsync(new triangular_pyramid_volume());
-                    break;
-
-                case "объем цилиндра":
-                    await Navigation.PushAsync(new cylinder_volume());
-                    break;
-            }
-
-             ((ListView)sender).SelectedItem = null;
+            ((ListView)sender).SelectedItem = null;
         }
-
 
     }
 }

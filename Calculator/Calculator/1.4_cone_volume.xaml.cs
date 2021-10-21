@@ -46,7 +46,7 @@ namespace Calculator
         {
             if (!TextChecker.EntryCheck(entry_R, entry_H))
             {
-                resultText.Text = Volume_Main.ERROR_TEXT;
+                resultText.Text = Volume_Main.ErrorText;
                 return;
             }
 
