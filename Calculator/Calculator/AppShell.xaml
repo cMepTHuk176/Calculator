@@ -20,6 +20,9 @@
     <FlyoutItem Title="пропорция" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
     </FlyoutItem>
+    <FlyoutItem Title="Погрешности" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Inaccuracy_main}"/>
+    </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
 
 </Shell>
