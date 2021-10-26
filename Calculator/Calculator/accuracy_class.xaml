@@ -36,13 +36,13 @@
         </Picker>
 
         <Entry x:Name="entryInacValue" Placeholder="Значение погрешности" FontSize="Medium" Grid.Row="1" Grid.Column="2" 
-               Grid.ColumnSpan="2"/>
+               Grid.ColumnSpan="2" MaxLength="7" Keyboard="Numeric"/>
 
         <Entry x:Name="entryMeasValue" Placeholder="Измеренное значение" FontSize="Medium" Grid.Row="2" 
-               Grid.ColumnSpan="2"/>
+               Grid.ColumnSpan="2" MaxLength="7" Keyboard="Numeric"/>
 
         <Entry x:Name="entryLimValue" Placeholder="Предел измерения" FontSize="Medium" Grid.Row="2" Grid.Column="2"
-               Grid.ColumnSpan="2"/>
+               Grid.ColumnSpan="2" MaxLength="7" Keyboard="Telephone"/>
 
         <Button Text="C" FontSize="30" Grid.Row="3" Grid.Column="0" Clicked="OnClear" BackgroundColor="White"
                 BorderWidth="0.1" BorderRadius="0" TextColor="Black" BorderColor="Black"/>
