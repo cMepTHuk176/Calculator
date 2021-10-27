@@ -6,29 +6,29 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Isothermal : ContentPage
+    public partial class Isobaric : ContentPage
     {
-        public Isothermal()
+        public Isobaric()
         {
             InitializeComponent();
         }
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(p, v);
+            TextCleaner.EntryClean(t, v);
         }
 
-        private void Result_Isothermal(object sender, EventArgs e)
+        private void Result_Isobaric(object sender, EventArgs e)
         {
-            double valuep = double.Parse(p.Text);
+            double valuep = double.Parse(t.Text);
             double valuev = double.Parse(v.Text);
 
-            resultText.Text = Calc_Isothermal(valuep, valuev).ToString();
+            resultText.Text = Calc_Isobaric(valuet, valuev).ToString();
         }
-        private double Calc_Isothermal (double valuep, double valuev)
+        private double Calc_Isobaric (double valuet, double valuev)
         {
             double resultMove;
-            resultMove = valuep*valuev;
+            resultMove = valuev/valuet;
             return resultMove;
         }
     }
