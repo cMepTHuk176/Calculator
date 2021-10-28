@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,7 @@ namespace Calculator
 
         private void OnClear(object sender, EventArgs e)
         {
+            resultText.FontSize = 40;
             resultText.Text = "0";
             TextCleaner.EntryClean(entryInacValue, entryMeasValue, entryLimValue);
         }
@@ -40,11 +42,59 @@ namespace Calculator
         {
             if (ErrorInfo() != "0")
             {
+                resultText.FontSize = 20;
                 resultText.Text = ErrorInfo();
                 return;
             }
 
-            resultText.Text = ResultFormula() == -1 ? ErrorInacValue : entryMeasValue.Text + " ± " + ResultFormula().ToString();
+            resultText.FontSize = 40;
+            double resultInac = RoundInaccuracy(ResultFormula());
+            string measValue = entryMeasValue.Text;
+
+            resultText.Text = resultInac == -1 ? ErrorInacValue : measValue + " ± " + resultInac.ToString();
+        }
+
+        private double RoundTinyNumber(double number)
+        {
+            string numStr = number.ToString();
+            List<char> letters = new List<char>();
+
+            foreach (char c in numStr)
+                if (char.IsDigit(c) && c != 0)
+                    letters.Add(c);
+
+            string temp = "0.";
+            foreach (var item in letters)
+                temp += item;
+
+            temp = letters[0] >= 1 || letters[0] <= 3
+                ? Math.Round(double.Parse(temp), 2, MidpointRounding.AwayFromZero).ToString()
+                : Math.Round(double.Parse(temp), 1, MidpointRounding.AwayFromZero).ToString();
+
+            return double.Parse(temp);
+        }
+
+        private double RoundInaccuracy(double number)
+        {
+            string resStr = number.ToString();
+
+            if (number >= 4)
+                resStr = Math.Round(number, MidpointRounding.AwayFromZero).ToString();
+
+            else if (number >= 1 && number < 4)
+                resStr = Math.Round(number, 1, MidpointRounding.AwayFromZero).ToString();
+
+            else if (number > 0 && number < 1)
+                resStr = RoundTinyNumber(number).ToString();
+
+
+            return double.Parse(resStr);
+        }
+
+        private int GetDecimalDigitsCount(double number)
+        {
+            string str = number.ToString(new NumberFormatInfo() { NumberDecimalSeparator = "." });
+            return str.Contains(".") ? str.Remove(0, Math.Truncate(number).ToString().Length + 1).Length : 0;
         }
 
         private (string, string) GetInaccuracies()
