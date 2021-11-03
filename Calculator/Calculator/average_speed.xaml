@@ -42,5 +42,9 @@
         <Button Text="=" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
                 FontSize="36" BorderRadius="0" Clicked="Result_averageSpeed" />
+        
+        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="9"
+               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
+               FontSize="36" BorderRadius="0" Clicked="Mechanic_Back" />
     </Grid>
 </ContentPage>

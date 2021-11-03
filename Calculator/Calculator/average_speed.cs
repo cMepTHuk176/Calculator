@@ -13,6 +13,11 @@ namespace Calculator
             InitializeComponent();
         }
 
+        private async void Mechanic_Back(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
