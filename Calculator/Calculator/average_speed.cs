@@ -19,20 +19,17 @@ namespace Calculator
             TextCleaner.EntryClean(S, t);
         }
 
-        private void OnIndexChanged(object sender, EventArgs e)
+          private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(S, t))
-            {
-                resultText.Text = mechanic_main.ErrorText;
-                return;
-            }
+            if (TextChecker.EntryCheck(S, t))
+                Result_averageSpeed(null, null);
         }
 
         private void Result_averageSpeed(object sender, EventArgs e)
         {
             if (!TextChecker.EntryCheck(S, t))
             {
-                resultText.Text = mechanic_main.ERROR_TEXT;
+                resultText.Text = mechanic_main.ErrorText;
                 return;
             }
 

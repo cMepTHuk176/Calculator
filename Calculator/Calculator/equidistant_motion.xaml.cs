@@ -12,25 +12,33 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
             TextCleaner.EntryClean(x0, Vx, t);
         }
 
-        private void Result_Move(object sender, EventArgs e)
+        private void OnIndexChanged(object sender, EventArgs e)
         {
+            if (TextChecker.EntryCheck(x0, Vx, t))
+                Result_Equidistant(null, null);
+        }
+
+        private void Result_Equidistant(object sender, EventArgs e)
+        {
+             if (!TextChecker.EntryCheck(x0, Vx, t))
+            {
+                resultText.Text = mechanic_main.ErrorText;
+                return;
+            }
+
             double valuex0 = double.Parse(x0.Text);
             double valueVx = double.Parse(Vx.Text);
             double valuet = double.Parse(t.Text);
 
-            resultText.Text = Calc_Move(valuex0, valueVx, valuet).ToString();
+            double result = Mechanic.EquidistantMotion(valuex0, valueVx, valuet);
         }
-        private double Calc_Move(double valuex0,double valueVx,double valuet)
-        {
-            double resultMove;
-            resultMove = valuex0 + valueVx * valuet;
-            return resultMove;
-        }
+        
     }
 }

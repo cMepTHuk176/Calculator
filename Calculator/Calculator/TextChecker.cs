@@ -17,6 +17,7 @@ namespace Calculator
             return true;
         }
     }
+
     public static class TextCleaner
     {
         // стирает значение в каждом Entry

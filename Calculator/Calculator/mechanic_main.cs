@@ -26,13 +26,13 @@ namespace Calculator
                 _selected = e.Item.ToString();
             }
 
-            switch (_selected)
+            Page pageToGo = _selected switch
             {
-                case "средняя скорость":
-                    await Navigation.PushAsync(new average_speed());
-                    break;
+                "средняя скорость" => new average_speed(),
+                "равноускоренное движение" => new equidistant_motion()
+            };
 
-            }
+            await Navigation.PushAsync(pageToGo);
 
              ((ListView)sender).SelectedItem = null;
         }

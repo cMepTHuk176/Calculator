@@ -11,9 +11,9 @@ namespace Calculator
             return S / t;
         }
 
-        public static double ParallepipedVolume(double side1, double side2, double side3)
+        public static double EquidistantMotion(double valuex0, double valueVx, double valuet)
         {
-            return side1 * side2 * side3;
+            return valuex0 + valueVx * valuet;
         }
 
     }

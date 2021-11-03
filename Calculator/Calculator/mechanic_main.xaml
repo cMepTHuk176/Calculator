@@ -6,6 +6,7 @@
         <ResourceDictionary>
             <x:Array x:Key="mechanic" Type="{x:Type x:String}">
                 <x:String>средняя скорость</x:String>
+                <x:String>равноускоренное движение</x:String>
             </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>
