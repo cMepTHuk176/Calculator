@@ -25,7 +25,7 @@ namespace Calculator
 
             resultText.Text = Square_difference_m(ValueA, ValueB).ToString();
             resultText.Text = Сube_difference_m(ValueA, ValueB).ToString();
-            resultText.Text = Cube_sum_m((ValueA, ValueB).ToString();
+            resultText.Text = Cube_sum_m(ValueA, ValueB).ToString();
         }
         private double Square_difference_m(double ValueA, double ValueB)
         {
