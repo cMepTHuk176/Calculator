@@ -25,15 +25,15 @@ namespace Calculator
             {
                 _selected = e.Item.ToString();
             }
-
-            Page pageToGo = _selected switch
+            switch(_selected)
             {
-                "средняя скорость" => new average_speed(),
-                "равноускоренное движение" => new equidistant_motion()
+                case "средняя скорость":
+                    await Navigation.PushAsync(new average_speed());
+                    break;
+                case "равноускоренное движение":
+                    await Navigation.PushAsync(new equidistant_motion());
+                    break;
             };
-
-            await Navigation.PushAsync(pageToGo);
-
              ((ListView)sender).SelectedItem = null;
         }
 
