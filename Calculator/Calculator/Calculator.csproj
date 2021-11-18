@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
@@ -25,6 +25,26 @@
     </Compile>
     <Compile Update="proportion.xaml.cs">
       <DependentUpon>proportion.xaml</DependentUpon>
+    <Compile Update="1.1_sphere_volume.xaml.cs">
+      <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="1.2_parallelepiped_volume.xaml.cs">
+      <DependentUpon>1.2_parallelepiped_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="1.3_square_pyramid_volume.xaml.cs">
+      <DependentUpon>1.3_square_pyramid_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="1.4_cone_volume.xaml.cs">
+      <DependentUpon>1.4_cone_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="1.5_triangular_pyramid_volume.xaml.cs">
+      <DependentUpon>1.5_triangular_pyramid_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="1.6_cylinder_volume.xaml.cs">
+      <DependentUpon>1.6_cylinder_volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Volume_Main.xaml.cs">
+      <DependentUpon>Volume_Main.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -36,6 +56,28 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="proportion.xaml">
+    <EmbeddedResource Update="FlyoutPage1Detail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.1_sphere_volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Volume_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.2_parallelepiped_volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.3_square_pyramid_volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.4_cone_volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.5_triangular_pyramid_volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="1.6_cylinder_volume.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
