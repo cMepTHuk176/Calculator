@@ -8,6 +8,36 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page5 : ContentPage
     {
+        class Function
+        {
+            public:
+                double a;
+                double b;
+                void Result_Move()
+            {
+                
+            }
+            double Square_difference_m()
+            {
+                double dif;
+                dif = (a + b) * (a - b);
+                return dif;
+            }
+            double Сube_difference_m()
+            {
+                double dif;
+                dif = (a - b) * (a * a + a * b + b * b);
+                return dif;
+            }
+             double Cube_sum_m()
+            {
+                double sum;
+                sum = (a + b) * (a * a - a * b + b * b);
+                return sum;
+            }
+
+
+        }
         public Page5()
         {
             InitializeComponent();
@@ -29,24 +59,8 @@ namespace Calculator
             resultText.Text = Сube_difference_m(ValueA, ValueB).ToString();
             resultText.Text = Cube_sum_m(ValueA, ValueB).ToString();
         }
-        private double Square_difference_m(double ValueA, double ValueB)
-        {
-            double resultMove;
-            resultMove = (ValueA + ValueB) * (ValueA - ValueB);
-            return resultMove;
-        }
-        private double Сube_difference_m(double ValueA, double ValueB)
-        {
-            double resultMove1;
-            resultMove1 = (ValueA - ValueB) * (ValueA * ValueA + ValueA * ValueB + ValueB * ValueB);
-            return resultMove1;
-        }
-        private double Cube_sum_m(double ValueA, double ValueB)
-        {
-            double resultMove2;
-            resultMove2 = (ValueA + ValueB) * (ValueA * ValueA - ValueA * ValueB + ValueB * ValueB);
-            return resultMove2;
-        }*/
+       
+        
 
     }
 } 
