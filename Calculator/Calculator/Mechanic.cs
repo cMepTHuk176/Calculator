@@ -16,6 +16,11 @@ namespace Calculator
             return x0 + Vx * t;
         }
 
+        public static double Acceleration_projection(double V0x, double Vx, double t)
+        {
+            return (Vx - V0x) / t;
+        }
+
     }
 
 
