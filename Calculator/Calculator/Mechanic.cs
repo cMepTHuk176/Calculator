@@ -21,6 +21,12 @@ namespace Calculator
             return (Vx - V0x) / t;
         }
 
+        public static double Moving_with_equidistant_motion(double V0x, double t, double a)
+        {
+            return (V0x * t) + ((a * t * t) / 2);
+        }
+
+        public static double equidistant_motion_point()
     }
 
 

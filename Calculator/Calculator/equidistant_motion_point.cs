@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class acceleration_projection : ContentPage
+    public partial class equidistant_motion_point : ContentPage
     {
-        public acceleration_projection()
+        public equidistant_motion_point()
         {
             InitializeComponent();
         }
@@ -24,15 +24,15 @@ namespace Calculator
         private void OnIndexChanged(object sender, EventArgs e)
         {
             if (TextChecker.EntryCheck(V0x, Vx, t))
-                Result_AccelerationProjection(null, null);
+                Result_equidistant_motion_point(null, null);
         }
-        private void Result_AccelerationProjection(object sender, EventArgs e)
+        private void Result_equidistant_motion_point(object sender, EventArgs e)
         {
             double valueV0x = double.Parse(V0x.Text);
             double valueVx = double.Parse(Vx.Text);
             double valuet = double.Parse(t.Text);
 
-            double result = Mechanic.Acceleration_projection(valueV0x, valueVx, valuet);
+            double result = Mechanic.equidistant_motion_point(valueV0x, valueVx, valuet);
         }
        
 }
