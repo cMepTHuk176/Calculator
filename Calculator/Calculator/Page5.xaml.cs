@@ -12,7 +12,9 @@ namespace Calculator
         {
             InitializeComponent();
         }
-        private void OnClear(object sender, EventArgs e)
+      
+
+       /* private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
             TextCleaner.EntryClean(ValueA, ValueB);
@@ -44,7 +46,7 @@ namespace Calculator
             double resultMove2;
             resultMove2 = (ValueA + ValueB) * (ValueA * ValueA - ValueA * ValueB + ValueB * ValueB);
             return resultMove2;
-        }
+        }*/
 
     }
-}
+} 

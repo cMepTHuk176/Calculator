@@ -1,16 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.Page4">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-
+             x:Class="Calculator.cube_difference_m">
     <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -28,20 +19,20 @@
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
 
-        <Label x:Name="textForm" FontSize="33" FontAttributes="Bold" BackgroundColor="White" Text="x=x0±Vxt"
+        <Label x:Name="textForm" FontSize="33" FontAttributes="Bold" BackgroundColor="White" Text="a^3-b^3 = (a-b)(a^2-ab+b^2)"
               TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <Entry x:Name="x0" Placeholder="x0" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="Vx" Placeholder="Vx" Grid.Row="2" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
-        <Entry x:Name="t" Placeholder="t" Grid.Row="3" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry x:Name="a" Placeholder="a" Grid.Row="1" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
+        <Entry x:Name="b" Placeholder="b" Grid.Row="2" Grid.Column="2" FontSize="36" Grid.ColumnSpan="2" />
 
-        <Button Text="C" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="C" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="36" BorderRadius="0" Clicked="OnClear" />
 
-        <Button Text="=" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="=" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
-                FontSize="36" BorderRadius="0" Clicked="Result_Move" />
+                FontSize="36" BorderRadius="0" Clicked="Result_cube_difference_m"/>
+
     </Grid>
 </ContentPage>
