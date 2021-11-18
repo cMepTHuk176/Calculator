@@ -14,7 +14,7 @@ namespace Calculator
 
         private async void MenuItem_Clicked(object sender, System.EventArgs e)
         {
-            await DisplayAlert("", "Привет Хабр!", "OK");
+            await DisplayAlert("", "Привет затупки!", "OK");
         }
     }
 }

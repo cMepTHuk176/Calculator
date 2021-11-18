@@ -14,11 +14,15 @@
     <FlyoutItem Title="калькулятор" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
     </FlyoutItem>
+
     <FlyoutItem Title="динамическая страница" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
+        <ShellContent ContentTemplate="{DataTemplate pages:Dinamic_page}"/>
     </FlyoutItem>
     <FlyoutItem Title="пропорция" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
+        <ShellContent ContentTemplate="{DataTemplate pages:proportion}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Объем фигур" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Volume_Main}"/>
     </FlyoutItem>
     <FlyoutItem Title="Погрешности" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Inaccuracy_main}"/>
