@@ -19,20 +19,21 @@ namespace Calculator
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(V0x, Vx, t);
+            TextCleaner.EntryClean(V0x, x0, t, a);
         }
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(V0x, Vx, t))
+            if (TextChecker.EntryCheck(V0x, x0, t, a))
                 Result_equidistant_motion_point(null, null);
         }
         private void Result_equidistant_motion_point(object sender, EventArgs e)
         {
             double valueV0x = double.Parse(V0x.Text);
-            double valueVx = double.Parse(Vx.Text);
+            double valuex0 = double.Parse(x0.Text);
             double valuet = double.Parse(t.Text);
+            double valuea = double.Parse(a.Text);
 
-            double result = Mechanic.equidistant_motion_point(valueV0x, valueVx, valuet);
+            double result = Mechanic.equidistant_motion_point(valuex0, valueV0x, valuet, valuea);
         }
        
 }
