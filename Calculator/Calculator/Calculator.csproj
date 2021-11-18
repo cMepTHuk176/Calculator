@@ -20,6 +20,11 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Dinamic_page.xaml.cs">
+      <DependentUpon>Dinamic_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="proportion.xaml.cs">
+      <DependentUpon>proportion.xaml</DependentUpon>
     <Compile Update="1.1_sphere_volume.xaml.cs">
       <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
     </Compile>
@@ -47,6 +52,10 @@
     <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Dinamic_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="proportion.xaml">
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

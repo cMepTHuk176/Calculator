@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.proportion">
+    <AbsoluteLayout>
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds=".2, .2, .25, .25"
+        AbsoluteLayout.LayoutFlags="All" />
+        <BoxView Color="Green" AbsoluteLayout.LayoutBounds=".35, .35, .25, .25"
+        AbsoluteLayout.LayoutFlags="All" />
+        <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5, .5, .25, .25"
+        AbsoluteLayout.LayoutFlags="All" />
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds=".95, .05, .25, .25"
+        AbsoluteLayout.LayoutFlags="All" />
+        <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".95, .95, .25, .25"
+        AbsoluteLayout.LayoutFlags="All" />
+        <BoxView Color="Green" AbsoluteLayout.LayoutBounds=".875 , .475, .10, .10"
+        AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>
+    <!-- 4 значения - координата x, y, ширина, высота
+    можно нарисовать пропорциональный интерфейс, который не будет съезжать 
+    при изменении экрана -->
