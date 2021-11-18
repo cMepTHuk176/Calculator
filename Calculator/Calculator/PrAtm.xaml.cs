@@ -12,13 +12,24 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PrAtm : ContentPage
     {
-        void picker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //resultText.Text = "Вы выбрали: " + picker.Items[picker.SelectedIndex];
-        }
         public PrAtm()
         {
             InitializeComponent();
+        }
+
+        private void OnCalculate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnClear(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoBack(object sender, EventArgs e)
+        {
+
         }
     }
 }

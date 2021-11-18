@@ -45,14 +45,14 @@
 
         <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0"  />
+                FontSize="36" BorderRadius="0" Clicked="OnClear"/>
 
         <Button Text="=" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
-                FontSize="36" BorderRadius="0"  />
+                FontSize="36" BorderRadius="0" Clicked="OnCalculate"/>
         <Button Text="назад" Grid.Row="3" Grid.Column="5" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
-                FontSize="30" BorderRadius="0"  />
+                FontSize="30" BorderRadius="0" Clicked="GoBack"/>
 
 
     </Grid>
