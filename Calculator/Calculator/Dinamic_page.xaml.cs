@@ -10,10 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class Dinamic_page : ContentPage
     {
         public int pages = 0;
-        public Page1()
+        public Dinamic_page()
         {
             InitializeComponent();
         }

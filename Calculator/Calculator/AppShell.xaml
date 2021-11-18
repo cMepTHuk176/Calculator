@@ -15,15 +15,11 @@
         <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
     </FlyoutItem>
     <FlyoutItem Title="динамическая страница" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
+        <ShellContent ContentTemplate="{DataTemplate pages:Dinamic_page}"/>
     </FlyoutItem>
     <FlyoutItem Title="пропорция" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
+        <ShellContent ContentTemplate="{DataTemplate pages:proportion}"/>
     </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
 
-    <FlyoutItem Title="мой_калькулятор" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Page2}"/>
-    </FlyoutItem>
-    
 </Shell>
