@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.mechanic_main">
+             x:Class="Calculator.isoprocess_main">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <x:Array x:Key="mechanic" Type="{x:Type x:String}">
+            <x:Array x:Key="isoprocess" Type="{x:Type x:String}">
                 <x:String>средняя скорость</x:String>
                 <x:String>равноускоренное движение</x:String>
             </x:Array>
@@ -13,7 +13,7 @@
     <StackLayout>
         <Label Text="Выберите формулу"
                 HorizontalOptions="Center" FontSize="Large" />
-        <ListView x:Name="mechaniclist" ItemsSource="{StaticResource Key=mechanic}" 
-                  ItemTapped="mechaniclist_ItemTapped"/>
+        <ListView x:Name="isoprocesslist" ItemsSource="{StaticResource Key=isoprocess}" 
+                  ItemTapped="isoprocesslist_ItemTapped"/>
     </StackLayout>
 </ContentPage>

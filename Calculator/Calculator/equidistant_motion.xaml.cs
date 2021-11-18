@@ -16,7 +16,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private async void Mechanic_Back(object sender, EventArgs e)
+        private async void Isoprocess_Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
@@ -37,7 +37,7 @@ namespace Calculator
         {
              if (!TextChecker.EntryCheck(x0, Vx, t))
             {
-                resultText.Text = mechanic_main.ErrorText;
+                resultText.Text = isoprocess_main.ErrorText;
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace Calculator
             double valueVx = double.Parse(Vx.Text);
             double valuet = double.Parse(t.Text);
 
-            double result = Mechanic.EquidistantMotion(valuex0, valueVx, valuet);
+            double result = Isoprocess.EquidistantMotion(valuex0, valueVx, valuet);
         }
         
     }

@@ -9,17 +9,17 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class mechanic_main : ContentPage
+    public partial class isoprocess_main : ContentPage
     {
         private string _selected;
         internal static readonly string ErrorText = "ОШИБКА";
 
-        public mechanic_main()
+        public isoprocess_main()
         {
             InitializeComponent();
         }
 
-        async void mechaniclist_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void isoprocesslist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item != null)
             {

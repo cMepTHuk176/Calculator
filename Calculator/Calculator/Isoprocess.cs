@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator
 {
-    public class Mechanic
+    public class Isoprocess
     {
         public static double AverageSpeed(double S, double t)
         {

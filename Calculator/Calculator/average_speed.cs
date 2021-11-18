@@ -16,7 +16,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private async void Mechanic_Back(object sender, EventArgs e)
+        private async void Isoprocess_Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
@@ -37,14 +37,14 @@ namespace Calculator
         {
             if (!TextChecker.EntryCheck(S, t))
             {
-                resultText.Text = mechanic_main.ErrorText;
+                resultText.Text = isoprocess_main.ErrorText;
                 return;
             }
 
             double valueS = double.Parse(S.Text);
             double valuet = double.Parse(t.Text);
 
-            double result = Mechanic.AverageSpeed(valueS, valuet);
+            double result = Isoprocess.AverageSpeed(valueS, valuet);
         }
 
     }
