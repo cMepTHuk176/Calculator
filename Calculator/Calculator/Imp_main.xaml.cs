@@ -17,12 +17,12 @@ namespace Calculator
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Volume_Main : ContentPage
+    public partial class Imp_main : ContentPage
     {
         private string _selected;
         internal static readonly string ErrorText = "ОШИБКА";
 
-        public Volume_Main()
+        public Imp_main()
         {
             InitializeComponent();
         }
@@ -36,12 +36,8 @@ namespace Calculator
 
             Page pageToGo = _selected switch
             {
-                "объем сферы" => new sphere_volume(),
-                "объем конуса" => new cone_volume(),
-                "объем параллепипеда" => new parallelepiped_volume(),
-                "объем квадратной пирамиды" => new square_pyramid_volume(),
-                "объем треугольной пирамиды" => new triangular_pyramid_volume(),
-                "объем цилиндра" => new cylinder_volume()
+                "Импульс одинчного тела" => new sphere_volume(),
+                "Сохранение импульса" => new parallelepiped_volume(),
             };
 
             await Navigation.PushAsync(pageToGo);

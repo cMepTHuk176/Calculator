@@ -1,21 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.Volume_Main">
+             x:Class="Calculator.Imp_main">
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="figure" Type="{x:Type x:String}">
-                <x:String>объем сферы</x:String>
-                <x:String>объем конуса</x:String>
-                <x:String>объем параллепипеда</x:String>
-                <x:String>объем квадратной пирамиды</x:String>
-                <x:String>объем треугольной пирамиды</x:String>
-                <x:String>объем цилиндра</x:String>
+                <x:String>Импульс одинчного тела</x:String>
+                <x:String>Сохранение импульса</x:String>
             </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <Label Text="Выберите фигуру для нахождения объема"
+        <Label Text="Случай нахождения импульса"
                 HorizontalOptions="Center" FontSize="Large" />
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
                   ItemTapped="figurelist_ItemTapped"/>

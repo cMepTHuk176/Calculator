@@ -17,84 +17,43 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="9"/>
+              LineBreakMode="NoWrap" Grid.ColumnSpan="2" />
 
-        <RelativeLayout>
-            <Picker x:Name="resultLengthPicker" HeightRequest="40" WidthRequest="50" Background="Silver"
-                    HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="Small"
-                    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, 
-                Factor=0.25, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                Property=Width, Factor=0.25, Constant=5}">
+        <Label x:Name="Obj1" Grid.Row="1" Grid.Column="0" BackgroundColor="white" FontSize="36" Text="Тело 1"
+              TextColor="Black" />
 
-            </Picker>
-        </RelativeLayout>
+        <Label x:Name="Obj2" Grid.Row="1" Grid.Column="1" BackgroundColor="white" FontSize="36" Text="Тело 2"
+              TextColor="Black" />
 
-        <Entry x:Name="entry_X" Placeholder="X" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3"
-               MaxLength="5"/>
-        <Entry x:Name="entry_Y" Placeholder="Y" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" 
-               MaxLength="5"/>
-        <Entry x:Name="entry_Z" Placeholder="Z" Grid.Row="1" Grid.Column="6" FontSize="36" Grid.ColumnSpan="3" 
+        <Entry x:Name="entry_v1" Placeholder="v" Grid.Row="2" Grid.Column="0" FontSize="36"
                MaxLength="5"/>
 
-        <Picker x:Name="lengthPickerX" Grid.Row="1" Grid.Column="2" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
-            <Picker.Items>
-                <x:String>м</x:String>
-                <x:String>дм</x:String>
-                <x:String>см</x:String>
-                <x:String>мм</x:String>
-            </Picker.Items> 
-        </Picker>
+        <Entry x:Name="entry_m1" Placeholder="m" Grid.Row="3" Grid.Column="0" FontSize="36"
+	   MaxLength="5"/>
+        
+        <Entry x:Name="entry_v2" Placeholder="v" Grid.Row="2" Grid.Column="1" FontSize="36"
+               MaxLength="5"/>
 
-        <Picker x:Name="lengthPickerY" Grid.Row="1" Grid.Column="5" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
-            <Picker.Items>
-                <x:String>м</x:String>
-                <x:String>дм</x:String>
-                <x:String>см</x:String>
-                <x:String>мм</x:String>
-            </Picker.Items>
-        </Picker>
+        <Entry x:Name="entry_m2" Placeholder="m" Grid.Row="3" Grid.Column="1" FontSize="36"
+	   MaxLength="5"/>
 
-        <Picker x:Name="lengthPickerZ" Grid.Row="1" Grid.Column="8" BackgroundColor="Silver" 
-                HorizontalTextAlignment="Center" SelectedIndexChanged="OnIndexChanged" FontSize="12">
-            <Picker.Items>
-                <x:String>м</x:String>
-                <x:String>дм</x:String>
-                <x:String>см</x:String>
-                <x:String>мм</x:String>
-            </Picker.Items>
-        </Picker>
-
-
-        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="9"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="36" BorderRadius="0" Clicked="Volume_Back" />
-
-
-        <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="C" Grid.Row="4" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0" Clicked="OnClear" />
+                FontSize="36" BorderRadius="0" Clicked="OnClear"  />
 
-        <Button Text="=" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="6" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="=" Grid.Row="4" Grid.Column="1" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
-                FontSize="36" BorderRadius="0" Clicked="Result_Parallepiped" />
+                FontSize="36" BorderRadius="0"  />
 
     </Grid>
 </ContentPage>
