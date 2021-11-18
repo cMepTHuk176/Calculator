@@ -25,6 +25,7 @@
     </Compile>
     <Compile Update="proportion.xaml.cs">
       <DependentUpon>proportion.xaml</DependentUpon>
+    </Compile>
     <Compile Update="1.1_sphere_volume.xaml.cs">
       <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
     </Compile>
@@ -56,6 +57,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="proportion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+     </EmbeddedResource>
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
