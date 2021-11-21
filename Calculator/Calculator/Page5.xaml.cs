@@ -8,7 +8,7 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page5 : ContentPage
     {
-        class Function
+      /*  class Function
         {
             public:
                 double a;
@@ -44,7 +44,7 @@ namespace Calculator
         }
       
 
-       /* private void OnClear(object sender, EventArgs e)
+        private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
             TextCleaner.EntryClean(ValueA, ValueB);
@@ -60,7 +60,7 @@ namespace Calculator
             resultText.Text = Cube_sum_m(ValueA, ValueB).ToString();
         }
        
-        
+        */
 
     }
 } 

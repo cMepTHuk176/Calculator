@@ -35,8 +35,14 @@ namespace Calculator
 
             double valueA = double.Parse(a.Text);
             double valueB = double.Parse(b.Text);
-            double result = 2;
-            resultText.Text = result.ToString("0.00E+0");
+           // double result = 2;
+            resultText.Text = Square_difference_m(valueA, valueB).ToString();
+        }
+        private double Square_difference_m(double valueA, double valueB)
+        {
+            double diff_square = 0;
+            diff_square = (valueA + valueB) * (valueA - valueB);
+            return diff_square;
         }
     }
 }

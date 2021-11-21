@@ -36,8 +36,14 @@ namespace Calculator
 
             double valueA = double.Parse(a.Text);
             double valueB = double.Parse(b.Text);
-            double result = 2;
-            resultText.Text = result.ToString("0.00E+0");
+            // double result = 2;
+            resultText.Text = Cube_sum_m(valueA, valueB).ToString();
+        }
+        private double Cube_sum_m(double valueA, double valueB)
+        {
+            double sum_cub = 0;
+            sum_cub = (valueA + valueB) * (valueA * valueA - valueA * valueB + valueB * valueB);
+            return sum_cub;
         }
     }
 }
