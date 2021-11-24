@@ -36,8 +36,8 @@ namespace Calculator
 
             Page pageToGo = _selected switch
             {
-                "Импульс одинчного тела" => new sphere_volume(),
-                "Сохранение импульса" => new parallelepiped_volume(),
+                "Импульс одиночного тела" => new finding_impulse(),
+                "Сохранение импульса" => new preservation_impulse(),
             };
 
             await Navigation.PushAsync(pageToGo);

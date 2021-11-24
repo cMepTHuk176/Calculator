@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.sphere_volume"
-             Title="Объем сферы">
+             x:Class="Calculator.preservation_impulse"
+             Title="Сохранение импульса">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
@@ -17,6 +17,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -27,27 +28,32 @@
         <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="2" />
-		
-		<Label x:Name="Placeholder" Grid.Row="1" Grid.Column="0" BackgroundColor="white" FontSize="36" Text="Тут формула"
+
+        <Label x:Name="Obj1" Grid.Row="1" Grid.Column="0" BackgroundColor="white" FontSize="36" Text="Тело 1"
               TextColor="Black" />
-		
-		<Entry x:Name="entry_P" Placeholder="P" Grid.Row="1" Grid.Column="1" FontSize="36" 
-               MaxLength="5"/>
-		
-		<Entry x:Name="entry_v" Placeholder="v" Grid.Row="2" Grid.Column="1" FontSize="36"
+
+        <Label x:Name="Obj2" Grid.Row="1" Grid.Column="1" BackgroundColor="white" FontSize="36" Text="Тело 2"
+              TextColor="Black" />
+
+        <Entry x:Name="entry_v1" Placeholder="v" Grid.Row="2" Grid.Column="0" FontSize="36"
                MaxLength="5"/>
 
-		<Entry x:Name="entry_m" Placeholder="m" Grid.Row="3" Grid.Column="1" FontSize="36"
+        <Entry x:Name="entry_m1" Placeholder="m" Grid.Row="3" Grid.Column="0" FontSize="36"
 	   MaxLength="5"/>
-		
-		<Button Text="C" Grid.Row="3" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
+        
+        <Entry x:Name="entry_v2" Placeholder="v" Grid.Row="2" Grid.Column="1" FontSize="36"
+               MaxLength="5"/>
+
+        <Entry x:Name="entry_m2" Placeholder="m" Grid.Row="3" Grid.Column="1" FontSize="36"
+	   MaxLength="5"/>
+
+        <Button Text="C" Grid.Row="4" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="36" BorderRadius="0" Clicked="OnClear"  />
 
-        <Button Text="=" Grid.Row="2" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="=" Grid.Row="4" Grid.Column="1" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
-                FontSize="36" BorderRadius="0" Clicked="Result_Sphere" />
-
+                FontSize="36" BorderRadius="0"  />
 
     </Grid>
 </ContentPage>

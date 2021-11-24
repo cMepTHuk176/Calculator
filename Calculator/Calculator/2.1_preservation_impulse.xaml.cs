@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class sphere_volume : ContentPage
+    public partial class preservation_impulse : ContentPage
     {
-        public sphere_volume()
+
+        public preservation_impulse()
         {
             InitializeComponent();
+
         }
 
         private async void Volume_Back(object sender, EventArgs e)
@@ -23,18 +26,25 @@ namespace Calculator
 
         private void OnClear(object sender, EventArgs e)
         {
-           // resultText.Text = "0";
-           // TextCleaner.EntryClean(entryText_R);
+            //resultText.Text = "0";
+            //TextCleaner.EntryClean(entry_X, entry_Y, entry_Z);
         }
 
         private void OnIndexChanged(object sender, EventArgs e)
         {
-               // if (TextChecker.EntryCheck(entryText_R))
-               // Result_Sphere(null, null);
+           // if (TextChecker.EntryCheck(entry_X, entry_Y, entry_Z))
+           //    Result_Parallepiped(null, null);
         }
 
-        private void Result_Sphere(object sender, EventArgs e)
+
+        private void Result_Parallepiped(object sender, EventArgs e)
         {
+           /* if (!TextChecker.EntryCheck(entry_X, entry_Y, entry_Z))
+            {
+                resultText.Text = Imp_main.ErrorText;
+                return;
+            }*/
+
         }
     }
 }

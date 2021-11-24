@@ -20,20 +20,11 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Update="1.1_sphere_volume.xaml.cs">
-      <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
+    <Compile Update="1.1_finding_impulse.xaml.cs">
+      <DependentUpon>1.1_finding_impulse.xaml</DependentUpon>
     </Compile>
-    <Compile Update="1.2_parallelepiped_volume.xaml.cs">
-      <DependentUpon>1.2_parallelepiped_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="1.4_cone_volume.xaml.cs">
-      <DependentUpon>1.4_cone_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="1.6_cylinder_volume.xaml.cs">
-      <DependentUpon>1.6_cylinder_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Imp_main.xaml.cs">
-      <DependentUpon>Imp_main.xaml</DependentUpon>
+    <Compile Update="2.1_preservation_impulse.xaml.cs">
+      <DependentUpon>2.1_preservation_impulse.xaml.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -44,13 +35,13 @@
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="1.1_sphere_volume.xaml">
+    <EmbeddedResource Update="1.1_finding_impulse.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Imp_main.xaml">
+    <EmbeddedResource Update="main_impulse.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="1.2_parallelepiped_volume.xaml">
+    <EmbeddedResource Update="2.1_preservation_impulse.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="1.4_cone_volume.xaml">

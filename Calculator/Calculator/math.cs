@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Calculator
 {
-    public class Figure
+    public class math
     {
-        public static double SphereVolume(double radius)
+        public static double FndingImpulse(double side1, double side2)
         {
-            return Math.PI * Math.Pow(radius, 3) * 4 / 3;
+            return side1 * side2;
         }
 
         public static double ParallepipedVolume(double side1, double side2, double side3)
