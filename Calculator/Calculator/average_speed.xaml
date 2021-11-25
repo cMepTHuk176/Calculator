@@ -45,7 +45,7 @@
 
         <Button Text="=" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0" Clicked="Result_Equidistant" />
+                FontSize="36" BorderRadius="0"  />
 
     </Grid>
 </ContentPage>
