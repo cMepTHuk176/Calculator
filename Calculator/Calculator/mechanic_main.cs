@@ -30,8 +30,23 @@ namespace Calculator
                 case "средняя скорость":
                     await Navigation.PushAsync(new average_speed());
                     break;
-                case "равноускоренное движение":
+                case "равномерное движение":
                     await Navigation.PushAsync(new equidistant_motion());
+                    break;
+                case "равноускоренное движение":
+                    await Navigation.PushAsync(new axellerate_motion());
+                    break;
+                case "ускорение":
+                    await Navigation.PushAsync(new axell());
+                    break;
+                case "центростремительное ускорение(через w)":
+                    await Navigation.PushAsync(new axeleration_center());
+                    break;
+                case "центростремительное ускорение(через V)":
+                    await Navigation.PushAsync(new axeleration_center_lin());
+                    break;
+                case "Линейная скорость":
+                    await Navigation.PushAsync(new linear_velosity());
                     break;
             };
              ((ListView)sender).SelectedItem = null;

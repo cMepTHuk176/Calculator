@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.axeleration_center">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+    <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
+
+        <Label x:Name="textForm" FontSize="33" FontAttributes="Bold" BackgroundColor="White" Text="a=(w^2)*R"
+              TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        <Entry x:Name="w" Placeholder="w" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
+        <Entry x:Name="R" Placeholder="R" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
+
+        <Button Text="Назад" Grid.Row="2" Grid.Column="0"  BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0"  />
+
+        <Button Text="C" Grid.Row="2" Grid.Column="1"  BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0" Clicked="OnClear" />
+
+        <Button Text="=" Grid.Row="2" Grid.Column="2"  BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0"  />
+
+    </Grid>
+
+</ContentPage>

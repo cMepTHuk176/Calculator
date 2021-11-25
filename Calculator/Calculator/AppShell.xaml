@@ -11,8 +11,8 @@
             <Label Text="прототипы функций и методов"/>
         </StackLayout>
     </Shell.FlyoutHeader>
-    <FlyoutItem Title="калькулятор" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+    <FlyoutItem Title="Тест" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:linear_velosity}"/>
     </FlyoutItem>
     <FlyoutItem Title="Механика" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:mechanic_main}"/>
