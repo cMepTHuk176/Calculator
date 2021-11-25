@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Isochoric : ContentPage
+    public partial class Isochoric1 : ContentPage
     {
-        public Isochoric()
+        public Isochoric1()
         {
             InitializeComponent();
         }

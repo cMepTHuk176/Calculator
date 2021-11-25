@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.isoprocesses_main">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="figure" Type="{x:Type x:String}">
+                <x:String>Изотермический процесс</x:String>
+                <x:String>Изобарный процесс</x:String>
+                <x:String>Изохорный процесс</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Выберите фигуру для нахождения объема"
+                HorizontalOptions="Center" FontSize="Large" />
+        <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
+                  ItemTapped="figurelist_ItemTapped"/>
+    </StackLayout>
+</ContentPage>

@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 namespace Calculator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Isothermal : ContentPage
+    public partial class Isothermal1 : ContentPage
     {
-        public Isothermal()
+        public Isothermal1()
         {
             InitializeComponent();
         }
