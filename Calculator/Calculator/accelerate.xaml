@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.axellerate_motion">
+             x:Class="Calculator.accelerate">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
@@ -9,10 +9,10 @@
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
+
     <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
-            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -25,28 +25,23 @@
 
         <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
+              LineBreakMode="NoWrap" Grid.ColumnSpan="5" />
 
-        <Label x:Name="textForm" FontSize="33" FontAttributes="Bold" BackgroundColor="White" Text="x=x0±V0t±(at^2)/2"
+        <Label x:Name="textForm" FontSize="33" FontAttributes="Bold" BackgroundColor="White"
               TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
 
-        <Entry x:Name="x0" Placeholder="x0" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
-        <Entry x:Name="V0" Placeholder="Vx" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
-        <Entry x:Name="a" Placeholder="a" Grid.Row="3" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
-        <Entry x:Name="t" Placeholder="t" Grid.Row="4" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
+        <Entry x:Name="entryVx0" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="2" MaxLength="8"/>
+        <Entry x:Name="entryVx" Placeholder="Vx" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="2" MaxLength="8"/>
+        <Entry x:Name="entryT" Placeholder="t" Grid.Row="3" Grid.Column="3" FontSize="36" Grid.ColumnSpan="2" MaxLength="8"/>
 
-        <Button Text="Назад" Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" BorderColor = "Black" BorderWidth ="0.1"
-                BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0"  />
-
-        <Button Text="C" Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="C" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="36" BorderRadius="0" Clicked="OnClear" />
 
-        <Button Text="=" Grid.Row="2" Grid.Column="2" Grid.RowSpan="3" BorderColor = "Black" BorderWidth ="0.1"
-                BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0" Clicked="Result_axellerate_motion" />
+        <Button Text="=" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" BorderColor = "Black"
+                BorderWidth ="0.1" BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0" Clicked="Result_accel" />
 
     </Grid>
 </ContentPage>

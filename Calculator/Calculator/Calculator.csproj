@@ -26,6 +26,18 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="acceleration_center.xaml.cs">
+      <DependentUpon>acceleration_center.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="acceleration_center_lin.xaml.cs">
+      <DependentUpon>acceleration_center_lin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="accelerate.xaml.cs">
+      <DependentUpon>accelerate.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="accelerate_motion.xaml.cs">
+      <DependentUpon>accelerate_motion.xaml</DependentUpon>
+    </Compile>
     <Compile Update="equidistant_motion.xaml.cs">
       <DependentUpon>equidistant_motion.xaml</DependentUpon>
     </Compile>
