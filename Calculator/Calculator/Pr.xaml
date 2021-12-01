@@ -32,16 +32,8 @@
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
 
-
-        <Picker x:Name="picker" Title="Выберите формулу" SelectedIndexChanged="picker_SelectedIndexChanged" Grid.Row="1" Grid.Column="0" FontSize="36" Grid.ColumnSpan="6">
-            <Picker.Items>
-                <x:String>P=F/S</x:String>
-                <x:String>P=pgh</x:String>
-                <x:String>P=p0e^(-Mgh/RT)</x:String>
-            </Picker.Items>
-        </Picker>
-        <Entry Placeholder="F" Grid.Row="2" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" />
-        <Entry Placeholder="S" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
+        <Entry x:Name="entryF" Placeholder="F" Grid.Row="2" Grid.Column="0" FontSize="36" Grid.ColumnSpan="3" />
+        <Entry x:Name="entryS" Placeholder="S" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="3" />
 
         <Button Text="C" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
@@ -50,10 +42,6 @@
         <Button Text="=" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="white" TextColor="Black"
                 FontSize="36" BorderRadius="0" Clicked="OnCalculate"/>
-        <Button Text="назад" Grid.Row="3" Grid.Column="5" BorderColor = "Black" BorderWidth ="0.1"
-                BackgroundColor="white" TextColor="Black"
-                FontSize="30" BorderRadius="0" Clicked="GoBack"/>
-
 
     </Grid>
 </ContentPage>
