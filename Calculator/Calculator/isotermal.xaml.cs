@@ -43,7 +43,7 @@ namespace Calculator
             string picker_item = picker.Items[picker.SelectedIndex];
             switch (picker_item)
             {
-                case "p(v)": buf1 = int.Parse(p.Text); buf2 = int.Parse(v.Text); n = int.Parse(t.Text) break;
+                case "p(v)": buf1 = int.Parse(p.Text); buf2 = int.Parse(v.Text); n = int.Parse(t.Text); break;
                 case "p(t)": buf1 = int.Parse(p.Text); buf2 = int.Parse(t.Text); break;
                 case "v(t)": buf1 = int.Parse(p.Text); break;
             }

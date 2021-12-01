@@ -6,7 +6,7 @@ namespace Calculator
 {
     public static class Process
     {
-        public static void Isothermal(int p, int v, int t,string n)
+        public static void Isothermal(int p, int v, int t, string n)
         {
 
         }
