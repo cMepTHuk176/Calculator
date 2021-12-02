@@ -27,7 +27,7 @@
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="5" />
 
-        <Label x:Name="textForm" FontSize="32" FontAttributes="Bold" BackgroundColor="White"
+        <Label x:Name="textForm" FontSize="24" FontAttributes="Bold" BackgroundColor="White"
               TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
 
