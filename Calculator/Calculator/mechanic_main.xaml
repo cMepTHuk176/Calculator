@@ -5,12 +5,12 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="mechanic" Type="{x:Type x:String}">
-                <x:String>средняя скорость</x:String>
-                <x:String>равномерное движение</x:String>
-                <x:String>равноускоренное движение</x:String>
-                <x:String>ускорение</x:String>
-                <x:String>центростремительное ускорение(через w)</x:String>
-                <x:String>центростремительное ускорение(через V)</x:String>
+                <x:String>Средняя скорость</x:String>
+                <x:String>Равномерное движение</x:String>
+                <x:String>Равноускоренное движение</x:String>
+                <x:String>Ускорение</x:String>
+                <x:String>Центростремительное ускорение(через w)</x:String>
+                <x:String>Центростремительное ускорение(через V)</x:String>
                 <x:String>Линейная скорость</x:String>
             </x:Array>
         </ResourceDictionary>

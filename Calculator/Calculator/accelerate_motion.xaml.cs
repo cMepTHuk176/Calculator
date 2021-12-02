@@ -44,7 +44,7 @@ namespace Calculator
             var V0 = double.Parse(entryV0.Text);
             var a = double.Parse(entryA.Text);
             var t = double.Parse(entryT.Text);
-            var resultDistance = Mechanic.AccelerateMotion(x0, V0, a, t);
+            var resultDistance = Mechanic.equidistant_motion_point(x0, V0, a, t);
 
             var precision = (resultDistance - (int)resultDistance == 0)
                 ? "0"
