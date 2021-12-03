@@ -6,19 +6,20 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="figure" Type="{x:Type x:String}">
-                <x:String>квадрат суммы</x:String>
-                <x:String>квадрат разности</x:String>
-                <x:String>разность квадратов</x:String>
-                <x:String>куб суммы</x:String>
-                <x:String>куб разности</x:String>
-                <x:String>сумма кубов</x:String>
-                <x:String>разность кубов</x:String>
+                <x:String>Квадрат суммы</x:String>
+                <x:String>Квадрат разности</x:String>
+                <x:String>Разность квадратов</x:String>
+                <x:String>Куб суммы</x:String>
+                <x:String>Куб разности</x:String>
+                <x:String>Сумма кубов</x:String>
+                <x:String>Разность кубов</x:String>
             </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>
+    
     <StackLayout>
-        <Label Text="Выберите фигуру для нахождения объема"
-                HorizontalOptions="Center" FontSize="Large" />
+        <Label Text="Выберите формулу сокращённого умножения"
+                HorizontalOptions="Center" FontSize="Medium" BackgroundColor="LightYellow"/>
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
                   ItemTapped="figurelist_ItemTapped"/>
     </StackLayout>

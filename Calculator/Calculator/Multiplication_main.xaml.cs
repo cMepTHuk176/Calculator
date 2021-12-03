@@ -26,13 +26,13 @@ namespace Calculator
 
             Page pageToGo = _selected switch
             {
-                "квадрат суммы" => new square_sum(),
-                "квадрат разности" => new square_difference(),
-                "разность квадратов" => new square_difference_m(),
-                "куб суммы" => new cube_sum(),
-                "куб разности" => new cube_difference(),
-                "сумма кубов" => new cube_sum_m(),
-                "разность кубов" => new cube_difference_m()
+                "Квадрат суммы" => new square_sum(),
+                "Квадрат разности" => new square_difference(),
+                "Разность квадратов" => new square_difference_m(),
+                "Куб суммы" => new cube_sum(),
+                "Куб разности" => new cube_difference(),
+                "Сумма кубов" => new cube_sum_m(),
+                "Разность кубов" => new cube_difference_m()
             };
 
             await Navigation.PushAsync(pageToGo);

@@ -15,27 +15,28 @@ namespace Calculator
         public square_sum()
         {
             InitializeComponent();
+            textForm.Text = "(a + b)\u00B2 = a\u00B2 + 2ab + b\u00B2";
         }
 
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(a, b);
+            TextCleaner.EntryClean(entryA, entryB);
         }
 
         private void Result_square_sum(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(a, b))
+            if (!TextChecker.EntryCheck(entryA, entryB))
             {
-                resultText.Text = "ОШИБКА";
+                resultText.Text = Multiplication_main.ErrorText;
                 return;
             }
 
-            double valueA = double.Parse(a.Text);
-            double valueB = double.Parse(b.Text);
-            string result = (Math.Pow(valueA, 2) + 2 * valueA * valueB + Math.Pow(valueB, 2)).ToString();
-            resultText.Text = $"({valueA} + {valueB})\u00B2 = {valueA}\u00B2 + 2 * {valueA} * {valueB} + {valueB}\u00B2"
-                + $" = {result}";
+            var a = double.Parse(entryA.Text);
+            var b = double.Parse(entryB.Text);
+            var result = MultiplicationFormulas.SquareSum(a, b, out string resText);
+
+            resultText.Text = resText + " = " + result.ToString();
         }
     }
 }

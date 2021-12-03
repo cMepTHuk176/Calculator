@@ -15,35 +15,34 @@ namespace Calculator
         public cube_difference_m()
         {
             InitializeComponent();
+            textForm.Text = "a\u00B3-b\u00B3 = (a-b)(a\u00B2-ab+b\u00B2)";
         }
+
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(a, b);
+            TextCleaner.EntryClean(entryA, entryB);
         }
+
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(a, b))
+            if (TextChecker.EntryCheck(entryA, entryB))
                 Result_cube_difference_m(null, null);
         }
+
         private void Result_cube_difference_m(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(a, b))
+            if (!TextChecker.EntryCheck(entryA, entryB))
             {
-                resultText.Text = "ОШИБКА";
+                resultText.Text = Multiplication_main.ErrorText;
                 return;
             }
 
-            double valueA = double.Parse(a.Text);
-            double valueB = double.Parse(b.Text);
-           // double result = 2;
-            resultText.Text = Cube_difference_m(valueA, valueB).ToString();
-        }
-        private double Cube_difference_m(double valueA, double valueB)
-        {
-            double diff_cub = 0;
-            diff_cub = (valueA - valueB) * (valueA * valueA + valueA * valueB + valueB * valueB);
-            return diff_cub;
+            var a = double.Parse(entryA.Text);
+            var b = double.Parse(entryB.Text);
+            var result = MultiplicationFormulas.DiffCube(a, b, out string resText);
+
+            resultText.Text = resText + " = " + result.ToString();
         }
     }
 }

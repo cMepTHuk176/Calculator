@@ -15,35 +15,34 @@ namespace Calculator
         public cube_sum_m()
         {
             InitializeComponent();
+            textForm.Text = "a\u00B3+b\u00B3 = (a+b)(a\u00B2-ab+b\u00B2)";
         }
+
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(a, b);
+            TextCleaner.EntryClean(entryA, entryB);
         }
+
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(a, b))
+            if (TextChecker.EntryCheck(entryA, entryB))
                 Result_cube_sum_m(null, null);
         }
+
         private void Result_cube_sum_m(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(a, b))
+            if (!TextChecker.EntryCheck(entryA, entryB))
             {
-                resultText.Text = "ОШИБКА";
+                resultText.Text = Multiplication_main.ErrorText;
                 return;
             }
 
-            double valueA = double.Parse(a.Text);
-            double valueB = double.Parse(b.Text);
-            // double result = 2;
-            resultText.Text = Cube_sum_m(valueA, valueB).ToString();
-        }
-        private double Cube_sum_m(double valueA, double valueB)
-        {
-            double sum_cub = 0;
-            sum_cub = (valueA + valueB) * (valueA * valueA - valueA * valueB + valueB * valueB);
-            return sum_cub;
+            var a = double.Parse(entryA.Text);
+            var b = double.Parse(entryB.Text);
+            var result = MultiplicationFormulas.SumCubs(a, b, out string resText);
+
+            resultText.Text = resText + " = " + result.ToString();
         }
     }
 }

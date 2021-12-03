@@ -15,29 +15,34 @@ namespace Calculator
         public square_difference()
         {
             InitializeComponent();
+            textForm.Text = "(a-b)\u00B2 = a\u00B2-2ab+b\u00B2";
         }
+
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(a, b);
+            TextCleaner.EntryClean(entryA, entryB);
         }
+
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(a, b))
+            if (TextChecker.EntryCheck(entryA, entryB))
                 Result_square_difference(null, null);
         }
+
         private void Result_square_difference(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(a, b))
+            if (!TextChecker.EntryCheck(entryA, entryB))
             {
-                resultText.Text = "ОШИБКА";
+                resultText.Text = Multiplication_main.ErrorText;
                 return;
             }
 
-            double valueA = double.Parse(a.Text);
-            double valueB = double.Parse(b.Text);
-            double result = 2;
-            resultText.Text = result.ToString("0.00E+0");
+            var a = double.Parse(entryA.Text);
+            var b = double.Parse(entryB.Text);
+            var result = MultiplicationFormulas.SquareDiff(a, b, out string resText);
+
+            resultText.Text = resText + " = " + result.ToString();
         }
     }
 }
