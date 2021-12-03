@@ -8,21 +8,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Calculator
 {
-    internal enum LengthPickerState
-    {
-        м = 0,
-        дм = 1,
-        см = 2,
-        мм = 3
-    }
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Imp_main : ContentPage
+    public partial class Impulse_Main : ContentPage
     {
         private string _selected;
         internal static readonly string ErrorText = "ОШИБКА";
 
-        public Imp_main()
+        public Impulse_Main()
         {
             InitializeComponent();
         }

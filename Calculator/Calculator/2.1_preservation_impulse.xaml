@@ -3,13 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.preservation_impulse"
              Title="Сохранение импульса">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    
     <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
 
         <Grid.RowDefinitions>
@@ -25,15 +19,15 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
+        <Label x:Name="resultText" FontSize="40" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="2" />
+              LineBreakMode="NoWrap" Grid.ColumnSpan="2" MaxLines="4"/>
 
         <Label x:Name="Obj1" Grid.Row="1" Grid.Column="0" BackgroundColor="white" FontSize="36" Text="Тело 1"
-              TextColor="Black" />
+              TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
 
         <Label x:Name="Obj2" Grid.Row="1" Grid.Column="1" BackgroundColor="white" FontSize="36" Text="Тело 2"
-              TextColor="Black" />
+              TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
 
         <Entry x:Name="entry_v1" Placeholder="v" Grid.Row="2" Grid.Column="0" FontSize="36"
                MaxLength="5"/>

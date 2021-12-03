@@ -16,25 +16,36 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private async void Volume_Back(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
         private void OnClear(object sender, EventArgs e)
         {
-           //resultText.Text = "0";
-           //TextCleaner.EntryClean(entryText_R);
+            resultText.Text = "0";
+            TextCleaner.EntryClean(entryM, entryV);
         }
 
         private void OnIndexChanged(object sender, EventArgs e)
         {
-               //if (TextChecker.EntryCheck(entryText_R))
-               //Result_Sphere(null, null);
+            if (TextChecker.EntryCheck(entryM, entryV))
+                Result_Impulse(null, null);
         }
 
-        private void Result_Sphere(object sender, EventArgs e)
+        private void Result_Impulse(object sender, EventArgs e)
         {
+            if (!TextChecker.EntryCheck(entryM, entryV))
+            {
+                resultText.Text = Impulse_Main.ErrorText;
+                return;
+            }
+
+            var m = double.Parse(entryM.Text);
+            var v = double.Parse(entryV.Text);
+            var result = ImpulseFormulas.Impulse(m, v);
+            var precision = (result - (int)result == 0)
+                ? "0"
+                : "2";
+
+            resultText.Text = result is >= 0.01 or <= 1000
+                ? result.ToString($"N{precision}") + " кг\u00B7м/с"
+                : result.ToString("0.00E+0") + " кг\u00B7м/с";
         }
     }
 }
