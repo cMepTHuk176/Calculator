@@ -24,33 +24,28 @@ namespace Calculator
             lengthPicker.SelectedIndex = 0;
         }
 
-        private async void Volume_Back(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";
-            TextCleaner.EntryClean(entryText_R);
+            TextCleaner.EntryClean(entryR);
         }
 
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            if (TextChecker.EntryCheck(entryText_R))
+            if (TextChecker.EntryCheck(entryR))
                 Result_Sphere(null, null);
         }
 
         private void Result_Sphere(object sender, EventArgs e)
         {
-            if (!TextChecker.EntryCheck(entryText_R))
+            if (!TextChecker.EntryCheck(entryR))
             {
                 resultText.Text = Volume_Main.ErrorText;
                 return;
             }
 
             double valueR = Converter.ConvertToLength(resultLengthPicker, lengthPicker) *
-                double.Parse(entryText_R.Text);
+                double.Parse(entryR.Text);
 
             double result = Figure.SphereVolume(valueR);
 

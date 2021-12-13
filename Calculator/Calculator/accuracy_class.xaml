@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.accuracy_class">
+             x:Class="Calculator.accuracy_class"
+             Title="Погрешность по классу точности">
     <ContentPage.Content>
         <StackLayout>
             
@@ -29,9 +30,9 @@
 
         <Picker x:Name="dependencyPicker" Grid.Row="1" Grid.ColumnSpan="2">
             <Picker.Items>
-                <x:String>Мультипликативная зависимость</x:String>
-                <x:String>Аддитивная зависимость</x:String>
-                <x:String>Комбинированная зависимость</x:String>
+                <x:String>Мультипликативная</x:String>
+                <x:String>Аддитивная</x:String>
+                <x:String>Комбинированная</x:String>
             </Picker.Items>
         </Picker>
 

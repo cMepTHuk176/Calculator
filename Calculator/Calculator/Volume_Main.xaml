@@ -5,12 +5,12 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="figure" Type="{x:Type x:String}">
-                <x:String>объем сферы</x:String>
-                <x:String>объем конуса</x:String>
-                <x:String>объем параллепипеда</x:String>
-                <x:String>объем квадратной пирамиды</x:String>
-                <x:String>объем треугольной пирамиды</x:String>
-                <x:String>объем цилиндра</x:String>
+                <x:String>Сфера</x:String>
+                <x:String>Конус</x:String>
+                <x:String>Параллепипед</x:String>
+                <x:String>Квадратная пирамида</x:String>
+                <x:String>Треугольная пирамида</x:String>
+                <x:String>Цилиндр</x:String>
             </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>

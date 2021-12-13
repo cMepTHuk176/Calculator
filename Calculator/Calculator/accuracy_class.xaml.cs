@@ -72,18 +72,16 @@ namespace Calculator
 
         private double RoundInaccuracy(double number)
         {
-            string resStr = number.ToString();
-
             if (number >= 4)
-                resStr = Math.Round(number, MidpointRounding.AwayFromZero).ToString();
+                number = Math.Round(number, MidpointRounding.AwayFromZero);
 
             else if (number is >= 1 and < 4)
-                resStr = Math.Round(number, 1, MidpointRounding.AwayFromZero).ToString();
+                number = Math.Round(number, 1, MidpointRounding.AwayFromZero);
 
             else if (number is > 0 and < 1)
-                resStr = RoundTinyNumber(number).ToString();
+                number = RoundTinyNumber(number);
 
-            return double.Parse(resStr);
+            return number;
         }
 
         private int GetDecimalDigitsCount(double number)
@@ -97,14 +95,11 @@ namespace Calculator
             string left = "0";
             string right = "0";
             entryInacValue.Text = entryInacValue.Text.Trim();
-            int whiteSpaceIndex = entryInacValue.Text.IndexOf(' ');
-            int slashIndex = entryInacValue.Text.IndexOf('/');
+            int separatorIndex = entryInacValue.Text.IndexOfAny(new char[] { ' ', '/' });
+            //int slashIndex = entryInacValue.Text.IndexOf('/');
 
-            if (slashIndex > 0)
-                SplitString(ref left, ref right, slashIndex);
-
-            else if (whiteSpaceIndex > 0)
-                SplitString(ref left, ref right, whiteSpaceIndex);
+            if (separatorIndex > 0)
+                SplitString(ref left, ref right, separatorIndex);
 
             return (left, right);
         }
