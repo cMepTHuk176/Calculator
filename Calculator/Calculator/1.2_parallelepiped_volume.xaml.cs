@@ -29,11 +29,6 @@ namespace Calculator
 
         }
 
-        private async void Volume_Back(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
         private void OnClear(object sender, EventArgs e)
         {
             resultText.Text = "0";

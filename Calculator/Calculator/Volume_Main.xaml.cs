@@ -27,21 +27,18 @@ namespace Calculator
             InitializeComponent();
         }
 
-        async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.Item != null)
-            {
-                _selected = e.Item.ToString();
-            }
+            string selected = e.Item.ToString() ?? "";
 
-            Page pageToGo = _selected switch
+            Page pageToGo = selected switch
             {
-                "объем сферы" => new sphere_volume(),
-                "объем конуса" => new cone_volume(),
-                "объем параллепипеда" => new parallelepiped_volume(),
-                "объем квадратной пирамиды" => new square_pyramid_volume(),
-                "объем треугольной пирамиды" => new triangular_pyramid_volume(),
-                "объем цилиндра" => new cylinder_volume()
+                "Сфера" => new sphere_volume(),
+                "Конус" => new cone_volume(),
+                "Параллепипед" => new parallelepiped_volume(),
+                "Квадратная пирамида" => new square_pyramid_volume(),
+                "Треугольная пирамида" => new triangular_pyramid_volume(),
+                "Цилиндр" => new cylinder_volume()
             };
 
             await Navigation.PushAsync(pageToGo);
