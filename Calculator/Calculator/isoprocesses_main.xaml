@@ -12,7 +12,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <Label Text="Выберите фигуру для нахождения объема"
+        <Label Text="выберите тип изотермического процесса"
                 HorizontalOptions="Center" FontSize="Large" />
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
                   ItemTapped="figurelist_ItemTapped"/>
