@@ -1,77 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Calculator
 {
-	public partial class MainPage : ContentPage
-	{
-		int currentState = 1;
-		string mathOperator;
-		double firstNumber, secondNumber;
+    public partial class MainPage : ContentPage
+    {
 
-		public MainPage()
-		{
-			InitializeComponent();
-			OnClear(this, null);
-		}
-
-		 void OnSelectNumber(object sender, EventArgs e)
-		{
-			Button button = (Button)sender;
-			string pressed = button.Text;
-
-			if (this.resultText.Text == "0" || currentState < 0)
-			{
-				this.resultText.Text = "";
-				if (currentState < 0)
-					currentState *= -1;
-			}
-
-			this.resultText.Text += pressed;
-
-            if (double.TryParse(this.resultText.Text, out double number))
-            {
-                this.resultText.Text = number.ToString("N0");
-                if (currentState == 1)
-                {
-                    firstNumber = number;
-                }
-                else
-                {
-                    secondNumber = number;
-                }
-            }
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+        private void OnSymbol(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            this.resultText.Text = Trim.Result(resultText.Text, button.Text, false);
+        }
+        private void OnExpression(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            this.resultText.Text += button.Text;
+        }
+        private void OnNumber(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            this.resultText.Text = Trim.Result(resultText.Text, button.Text, true);
+        }
+        private void OnClear(object sender, EventArgs e)
+        {
+            this.resultText.Text = Trim.Delete(resultText.Text, false);
+        }
+        private void OnClear1(object sender, EventArgs e)
+        {
+            this.resultText.Text = Trim.Delete(resultText.Text,true);
+        }
+        private void OnCalculate(object sender, EventArgs e)
+        {
+            this.resultText.Text += "\n= "+ Calculator.Calculate(resultText.Text);
         }
 
-		void OnSelectOperator(object sender, EventArgs e)
-		{
-			currentState = -2;
-			Button button = (Button)sender;
-			string pressed = button.Text;
-			mathOperator = pressed;
-		}
-
-		void OnClear(object sender, EventArgs e)
-		{
-			firstNumber = 0;
-			secondNumber = 0;
-			currentState = 1;
-			this.resultText.Text = "0";
-		}
-
-		void OnCalculate(object sender, EventArgs e)
-		{
-			if (currentState == 2)
-			{
-                var result = Calculator1.Calculate(firstNumber, secondNumber, mathOperator);
-
-				this.resultText.Text = result.ToString();
-				firstNumber = result;
-				currentState = -1;
-			}
-		}
-
-	}
+    }
 }

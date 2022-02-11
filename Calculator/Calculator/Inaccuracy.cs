@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Calculator
+﻿namespace Calculator
 {
     public static class Inaccuracy
     {
@@ -12,7 +8,7 @@ namespace Calculator
         public static double MultiplicativeInaccuracy(double inaccuracy, double measured) =>
             AdditiveInaccuracy(inaccuracy, measured);
 
-        public static double FullInaccuracy(double c, double d, double measured, double limit) => 
+        public static double FullInaccuracy(double c, double d, double measured, double limit) =>
             ((c - d) * measured / 100D) + (d / 100D * limit);
     }
 }
