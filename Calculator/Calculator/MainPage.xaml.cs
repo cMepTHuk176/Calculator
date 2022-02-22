@@ -35,7 +35,7 @@ namespace Calculator
         }
         private void OnCalculate(object sender, EventArgs e)
         {
-            this.resultText.Text += "\n= "+ Calculator.Calculate(resultText.Text);
+            this.resultText.Text += " = "+ Calculator.Calculate(resultText.Text);
         }
 
     }

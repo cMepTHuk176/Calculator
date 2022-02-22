@@ -5,7 +5,7 @@
        x:Class="Calculator.AppShell">
 
     <Shell.FlyoutHeader>
-        <StackLayout BackgroundColor="White" Padding="10">
+        <StackLayout>
             <Image HeightRequest="100" Source="xamarin.png" />
             <Label Text="Кулькулятор ver 0.00000001" />
             <Label Text="прототипы функций и методов"/>

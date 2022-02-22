@@ -10,7 +10,8 @@ namespace Calculator
 {
     class Trim
     {
-        static int condition = 0;
+        private static int condition = 0;
+// подобие автомата с состояниями разрешений на ввод
         public static string Result(string num, string button, bool number_mode)
         {
             if (num.IndexOf('=') != -1)
@@ -115,6 +116,7 @@ namespace Calculator
 
             return num;
         }
+// принудительное изменение состояний при удалении одного символа вместо строки
         public static string Delete(string mod, bool state)
         {
             string last;

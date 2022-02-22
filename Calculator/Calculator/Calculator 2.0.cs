@@ -5,14 +5,16 @@ namespace Calculator
 {
     class Calculator
     {
-        // есть modification преобразует выражение в обратную польскую запись
+
         // Counting соответственно его вычисляет
         // Все исключения обрабатываются тупым try
+        // метод вывода результата
         public static string Calculate(string input)
         {
-            string output = modification(input);
+            string output = Modification(input);
             return Counting(output);
         }
+        // приоритетность разрешенных символов
         private static byte Priority(char c)
         {
             switch (c)
@@ -25,11 +27,12 @@ namespace Calculator
                 case '/': return 4;
                 case '^': return 5;
                 case 'c': return 6;
-                case 's': return 7;
+                case 's': return 6;
                 default: return 8;
             }
         }
-        static private string Tg_mod(string input)
+        // обработка тригонометрических функций
+        private static string Tg_mod(string input)
         {
             if (input.IndexOf('s') != -1)
             {
@@ -41,22 +44,26 @@ namespace Calculator
             }
             return input;
         }
-        static private bool IfOperator(char с)
+        // обработка операторов
+        private static bool IfOperator(char с)
         {
             if (("+-÷×^()cs".IndexOf(с) != -1))
                 return true;
             return false;
         }
-        static private bool Separator(char c)
+        // обработка разделителей
+        private static bool Separator(char c)
         {
             if ((" ".IndexOf(c) != -1))
                 return true;
             return false;
         }
-        private static string modification(string input)
+        //преобразование строки в обратную польскую запись
+        private static string Modification(string input)
         {
             input = Tg_mod(input);
             string output = string.Empty;
+            // operStack - основной стек выражения
             Stack<char> operStack = new Stack<char>();
             try
             {
@@ -114,7 +121,8 @@ namespace Calculator
             }
             return output;
         }
-        static private string Counting(string input)
+        // вычисление строки обратной польской записи в число
+        private static string Counting(string input)
         {
             decimal result = 0;
             Stack<decimal> temp = new Stack<decimal>();
