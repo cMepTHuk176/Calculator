@@ -91,12 +91,12 @@
         <Button Text="^" Grid.Row="5" Grid.Column="3"
                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
-        <Button Text="sin" Grid.Row="1" Grid.Column="4"
+        <Button Text="Up" Grid.Row="1" Grid.Column="4"
                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnExpression" />
-        <Button Text="cos" Grid.Row="2" Grid.Column="4"
+               FontSize="25" BorderRadius="0" Clicked="OnUp" />
+        <Button Text="Back" Grid.Row="2" Grid.Column="4"
                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnExpression" />
+               FontSize="25" BorderRadius="0" Clicked="OnBack" />
         <Button Text=")" Grid.Row="3" Grid.Column="4"
                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" BorderRadius="0" Clicked="OnExpression" />

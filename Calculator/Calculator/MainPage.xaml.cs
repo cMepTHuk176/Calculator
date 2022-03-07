@@ -10,6 +10,16 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private void OnBack(object sender, EventArgs e)
+        {
+            History.FirstFormula = this.resultText.Text;
+            this.resultText.Text = History.LastFormula; 
+        }
+        private void OnUp(object sender, EventArgs e)
+        {
+            History.LastFormula = this.resultText.Text;
+            this.resultText.Text = History.FirstFormula;
+        }
         private void OnSymbol(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -35,8 +45,13 @@ namespace Calculator
         }
         private void OnCalculate(object sender, EventArgs e)
         {
+            History.LastFormula = this.resultText.Text;
             this.resultText.Text += " = "+ Calculator.Calculate(resultText.Text);
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
