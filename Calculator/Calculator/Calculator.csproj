@@ -20,12 +20,6 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Update="other\Dinamic_page.xaml.cs">
-      <DependentUpon>Dinamic_page.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="other\proportion.xaml.cs">
-      <DependentUpon>proportion.xaml</DependentUpon>
-    </Compile>
     <Compile Update="geometry\1.1_sphere_volume.xaml.cs">
       <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
     </Compile>
@@ -50,6 +44,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Algebra_main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry_main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="metrology\accuracy_class.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -64,12 +64,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Page1.xaml">
       </EmbeddedResource>
-    <EmbeddedResource Update="other\Dinamic_page.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="other\proportion.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-     </EmbeddedResource>
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -94,5 +88,12 @@
     <EmbeddedResource Update="geometry\1.6_cylinder_volume.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Physics_main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="other\" />
   </ItemGroup>
 </Project>
