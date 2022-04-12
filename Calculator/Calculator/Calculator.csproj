@@ -26,18 +26,6 @@
     <Compile Update="proportion.xaml.cs">
       <DependentUpon>proportion.xaml</DependentUpon>
     </Compile>
-    <Compile Update="1.1_sphere_volume.xaml.cs">
-      <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="1.2_parallelepiped_volume.xaml.cs">
-      <DependentUpon>1.2_parallelepiped_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="1.3_square_pyramid_volume.xaml.cs">
-      <DependentUpon>1.3_square_pyramid_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="1.4_cone_volume.xaml.cs">
-      <DependentUpon>1.4_cone_volume.xaml</DependentUpon>
-    </Compile>
     <Compile Update="1.5_triangular_pyramid_volume.xaml.cs">
       <DependentUpon>1.5_triangular_pyramid_volume.xaml</DependentUpon>
     </Compile>
@@ -56,6 +44,9 @@
     <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Equathion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Inaccuracy_main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -70,19 +61,7 @@
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="1.1_sphere_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Volume_Main.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="1.2_parallelepiped_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="1.3_square_pyramid_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="1.4_cone_volume.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="1.5_triangular_pyramid_volume.xaml">
