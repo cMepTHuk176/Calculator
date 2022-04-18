@@ -16,5 +16,16 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private async void OnSelected(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Page pageToGo = button.Text switch
+            {
+                "Расчет объема простых фигур" => new Volume_Main()
+            };
+            await Navigation.PushAsync(pageToGo);
+
+        }
     }
+    
 }

@@ -32,11 +32,10 @@ namespace Calculator
                 "Параллепипед" => new parallelepiped_volume(),
                 "Квадратная пирамида" => new square_pyramid_volume(),
                 "Треугольная пирамида" => new triangular_pyramid_volume(),
-                "Цилиндр" => new cylinder_volume()
+                "Цилиндр" => new cylinder_volume(),
+                "Назад" => new Geometry_main()      
             };
-
             await Navigation.PushAsync(pageToGo);
-
             ((ListView)sender).SelectedItem = null;
         }
 

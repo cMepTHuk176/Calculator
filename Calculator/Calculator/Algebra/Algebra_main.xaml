@@ -17,13 +17,14 @@
                FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextColor="Black"/>
         <ImageButton Source="quadratic_equation.png" Grid.Row="1" 
-               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"/>
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
         <Button Text="Кубическое уравнение" Grid.Row="2"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" />
+               FontSize="25"  Clicked="OnSelected"/>
         <Button Text="Разложение на множители" Grid.Row="3"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" />
+               FontSize="25"  Clicked="OnSelected"/>
     </Grid> 
 
 </ContentPage>
