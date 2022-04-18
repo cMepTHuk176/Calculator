@@ -14,7 +14,6 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
-        private string _selected;
         internal static readonly string ErrorText = "ОШИБКА";
 
         public Volume_Main()

@@ -16,5 +16,15 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private async void OnSelected(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Page pageToGo = button.Text switch
+            {
+                "Расчет погрешности прибора" => new Inaccuracy_main()
+            };
+            await Navigation.PushAsync(pageToGo);
+
+        }
     }
 }

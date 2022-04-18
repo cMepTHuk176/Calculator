@@ -21,14 +21,11 @@
     <FlyoutItem Title="Алгебра" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Algebra_main}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Физика" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Physics_main}"/>
-    </FlyoutItem>
     <FlyoutItem Title="Объем фигур" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Volume_Main}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Погрешности" Icon="xamarin.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:Inaccuracy_main}"/>
+    <FlyoutItem Title="Физика и метрология" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Physics_main}"/>
     </FlyoutItem>
     <MenuItem Clicked="MenuItem_Clicked" Text="Меню" IconImageSource="item.png" />
 
