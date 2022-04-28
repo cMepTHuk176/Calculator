@@ -21,7 +21,8 @@ namespace Calculator
             Button button = (Button)sender;
             Page pageToGo = button.Text switch
             {
-                "Расчет погрешности прибора" => new Inaccuracy_main()
+                "Расчет погрешности прибора" => new Inaccuracy_main(),
+                "Давления в газах" => new Inaccuracy_main()
             };
             await Navigation.PushAsync(pageToGo);
 

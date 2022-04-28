@@ -18,12 +18,13 @@ namespace Calculator
         }
         private async void OnSelected(object sender, EventArgs e)
         {
-           /* Button button = (Button)sender;
-            Page pageToGo = button.Text switch
+            ImageButton button = (ImageButton)sender;
+            
+            Page pageToGo = button.ClassId switch
             {
-                
+                "1" => new Algebra.DoubleCalc(),
             };
-            await Navigation.PushAsync(pageToGo); */
+            await Navigation.PushAsync(pageToGo); 
 
         }
     }
