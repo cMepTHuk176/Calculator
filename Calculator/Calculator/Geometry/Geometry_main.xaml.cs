@@ -21,7 +21,8 @@ namespace Calculator
             Button button = (Button)sender;
             Page pageToGo = button.Text switch
             {
-                "Расчет объема простых фигур" => new Volume_Main()
+                "Расчет объема простых фигур" => new Volume_Main(),
+                _ => throw new NotImplementedException()
             };
             await Navigation.PushAsync(pageToGo);
 

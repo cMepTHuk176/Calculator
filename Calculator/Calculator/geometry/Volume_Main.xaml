@@ -19,6 +19,6 @@
         <Label Text="Выберите фигуру для нахождения объема"
                 HorizontalOptions="Center" FontSize="Large" />
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" HorizontalOptions="CenterAndExpand" 
-                  ItemTapped="figurelist_ItemTapped" RefreshControlColor="Aqua"/>
+                  ItemTapped="Figurelist_ItemTapped" RefreshControlColor="Aqua"/>
     </StackLayout>
 </ContentPage>

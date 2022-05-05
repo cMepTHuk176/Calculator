@@ -21,7 +21,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void Figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             string selected = e.Item.ToString() ?? "";
 
@@ -33,7 +33,8 @@ namespace Calculator
                 "Квадратная пирамида" => new square_pyramid_volume(),
                 "Треугольная пирамида" => new triangular_pyramid_volume(),
                 "Цилиндр" => new cylinder_volume(),
-                "Назад" => new Geometry_main()      
+                "Назад" => new Geometry_main(),
+                _ => throw new System.NotImplementedException()
             };
             await Navigation.PushAsync(pageToGo);
             ((ListView)sender).SelectedItem = null;

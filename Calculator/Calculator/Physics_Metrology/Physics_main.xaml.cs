@@ -22,7 +22,8 @@ namespace Calculator
             Page pageToGo = button.Text switch
             {
                 "Расчет погрешности прибора" => new Inaccuracy_main(),
-                "Давления в газах" => new Inaccuracy_main()
+                "Давления в газах" => new Inaccuracy_main(),
+                _ => throw new NotImplementedException()
             };
             await Navigation.PushAsync(pageToGo);
 
