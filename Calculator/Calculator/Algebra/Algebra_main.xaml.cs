@@ -16,5 +16,17 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private async void OnSelected(object sender, EventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            
+            Page pageToGo = button.ClassId switch
+            {
+                "1" => new Algebra.DoubleCalc(),
+                _ => throw new NotImplementedException(),
+            };
+            await Navigation.PushAsync(pageToGo); 
+
+        }
     }
 }

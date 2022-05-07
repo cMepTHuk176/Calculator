@@ -14,7 +14,6 @@ namespace Calculator
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Volume_Main : ContentPage
     {
-        private string _selected;
         internal static readonly string ErrorText = "ОШИБКА";
 
         public Volume_Main()
@@ -22,7 +21,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private async void figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void Figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             string selected = e.Item.ToString() ?? "";
 
@@ -33,11 +32,11 @@ namespace Calculator
                 "Параллепипед" => new parallelepiped_volume(),
                 "Квадратная пирамида" => new square_pyramid_volume(),
                 "Треугольная пирамида" => new triangular_pyramid_volume(),
-                "Цилиндр" => new cylinder_volume()
+                "Цилиндр" => new cylinder_volume(),
+                "Назад" => new Geometry_main(),
+                _ => throw new System.NotImplementedException()
             };
-
             await Navigation.PushAsync(pageToGo);
-
             ((ListView)sender).SelectedItem = null;
         }
 

@@ -17,19 +17,20 @@ namespace Calculator
         // приоритетность разрешенных символов
         private static byte Priority(char c)
         {
-            switch (c)
+            return c switch
             {
-                case '(': return 0;
-                case ')': return 1;
-                case '+': return 2;
-                case '-': return 3;
-                case '*': return 4;
-                case '/': return 4;
-                case '^': return 5;
-                case 'c': return 6;
-                case 's': return 6;
-                default: return 8;
-            }
+                '(' => 0,
+                ')' => 1,
+                '+' => 2,
+                '-' => 3,
+                '*' => 4,
+                '/' => 4,
+                '^' => 5,
+                'c' => 6,
+                's' => 6,
+                'x' => 6,
+                _ => 8,
+            };
         }
         // обработка тригонометрических функций
         private static string Tg_mod(string input)
@@ -47,24 +48,25 @@ namespace Calculator
         // обработка операторов
         private static bool IfOperator(char с)
         {
-            if (("+-÷×^()cs".IndexOf(с) != -1))
+            if ("+-÷×^()cs".IndexOf(с) != -1)
                 return true;
             return false;
         }
         // обработка разделителей
         private static bool Separator(char c)
         {
-            if ((" ".IndexOf(c) != -1))
+            if (" ".IndexOf(c) != -1)
                 return true;
             return false;
         }
+
         //преобразование строки в обратную польскую запись
-        private static string Modification(string input)
+        private protected static string Modification(string input)
         {
             input = Tg_mod(input);
             string output = string.Empty;
             // operStack - основной стек выражения
-            Stack<char> operStack = new Stack<char>();
+            Stack<char> operStack = new();
             try
             {
                 input = Tg_mod(input);
@@ -125,7 +127,7 @@ namespace Calculator
         private static string Counting(string input)
         {
             decimal result = 0;
-            Stack<decimal> temp = new Stack<decimal>();
+            Stack<decimal> temp = new();
             string buf;
             try
             {

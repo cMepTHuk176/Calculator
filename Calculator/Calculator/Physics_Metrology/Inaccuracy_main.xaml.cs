@@ -18,7 +18,8 @@ namespace Calculator
 
             Page to = selected switch
             {
-                "Расчет погрешности по классу точности прибора" => new accuracy_class()
+                "Расчет погрешности по классу точности прибора" => new accuracy_class(),
+                _ => throw new System.NotImplementedException()
             };
 
             await Navigation.PushAsync(to);

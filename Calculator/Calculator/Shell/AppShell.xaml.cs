@@ -10,10 +10,5 @@ namespace Calculator
         {
             InitializeComponent();
         }
-
-        private async void MenuItem_Clicked(object sender, System.EventArgs e)
-        {
-            await DisplayAlert("", "Привет затупки!", "OK");
-        }
     }
 }
