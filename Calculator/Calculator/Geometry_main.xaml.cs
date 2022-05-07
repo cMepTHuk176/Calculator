@@ -16,5 +16,20 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void geometryList_ItemTapped(object s, ItemTappedEventArgs e)
+        {
+            string selected = e.Item.ToString() ?? "";
+                
+            Page to = selected switch
+            {
+                "Трапеция" => new geometry.trapezoid(),
+                "Окружность" => new geometry.circle(),
+                "Прямоугольник (квадрат)" => new geometry.rectangle(),
+            };
+
+            Navigation.PushAsync(to);
+            ((ListView)s).SelectedItem = null;
+        }
     }
 }

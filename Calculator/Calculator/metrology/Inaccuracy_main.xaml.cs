@@ -16,12 +16,12 @@ namespace Calculator
         {
             string selected = e.Item.ToString() ?? "";
 
-            Page pageToGo = selected switch
+            Page to = selected switch
             {
                 "Расчет погрешности по классу точности прибора" => new accuracy_class()
             };
 
-            await Navigation.PushAsync(pageToGo);
+            await Navigation.PushAsync(to);
 
             ((ListView)sender).SelectedItem = null;
         }

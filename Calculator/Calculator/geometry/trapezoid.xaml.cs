@@ -26,5 +26,16 @@ namespace Calculator.geometry
         {
 
         }
+
+        private void ListView_ItemTapped(object s, ItemTappedEventArgs e)
+        {
+            string selected = e.Item.ToString() ?? "";
+
+            Page to = selected switch
+            {
+                "Площадь" => 
+                "Средняя линия" => 
+            };
+        }
     }
 }
