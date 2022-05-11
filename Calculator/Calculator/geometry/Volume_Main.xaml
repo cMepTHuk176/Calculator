@@ -12,6 +12,7 @@
                 <x:String>Треугольная пирамида</x:String>
                 <x:String>Цилиндр</x:String>
                 <x:String>Назад</x:String>
+                <x:String>Один</x:String>
             </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>

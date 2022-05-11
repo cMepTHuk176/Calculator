@@ -12,6 +12,7 @@ namespace Calculator.CalcMain
             string output = Modification(input);
             return "0";
         }
+
         static string InParseX(string input)
         {
             return "0";

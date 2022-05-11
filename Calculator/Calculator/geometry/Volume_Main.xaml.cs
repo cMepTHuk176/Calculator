@@ -34,7 +34,8 @@ namespace Calculator
                 "Треугольная пирамида" => new triangular_pyramid_volume(),
                 "Цилиндр" => new cylinder_volume(),
                 "Назад" => new Geometry_main(),
-                _ => throw new System.NotImplementedException()
+                "Один" => new Geometry_main(),
+                _ => new NullPage()
             };
             await Navigation.PushAsync(pageToGo);
             ((ListView)sender).SelectedItem = null;

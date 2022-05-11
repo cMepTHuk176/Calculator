@@ -124,7 +124,7 @@ namespace Calculator
             return output;
         }
         // вычисление строки обратной польской записи в число
-        private static string Counting(string input)
+        private protected static string Counting(string input)
         {
             decimal result = 0;
             Stack<decimal> temp = new();
