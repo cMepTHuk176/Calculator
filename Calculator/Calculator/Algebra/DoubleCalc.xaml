@@ -12,6 +12,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,8 +24,20 @@
 
         <Label x:Name="resultText" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="5" />
-
+              LineBreakMode="NoWrap" Grid.Row="0" Grid.ColumnSpan="5" />
+        <Label x:Name="resultA" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="x₁ = "
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" />
+        <Label x:Name="resultB" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="x = "
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" />
+        <Label x:Name="resultD" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="D = "
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" />
+        <Label x:Name="resultK" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" 
+               Text=""
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" />
         <Button Text="7" Grid.Row="1" Grid.Column="0"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25"  Clicked="OnNumber" />
@@ -54,50 +67,38 @@
         <Button Text="3" Grid.Row="3" Grid.Column="2"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" BorderRadius="0" Clicked="OnNumber" />
-        <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+        <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" BorderRadius="0" Clicked="OnNumber" />
-        <Button Text="x" Grid.Row="4" Grid.Column="2"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnNumber" />
-        <Button Text="÷" Grid.Row="1" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="÷" Grid.Row="5" Grid.Column="4" BorderColor = "Black" BorderWidth ="0.1"
                  TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
-        <Button Text="×" Grid.Row="2" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="×" Grid.Row="5" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
                  TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
-        <Button Text="-" Grid.Row="3" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="-" Grid.Row="6" Grid.Column="4" BorderColor = "Black" BorderWidth ="0.1"
                 TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
-        <Button Text="+" Grid.Row="4" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="+" Grid.Row="6" Grid.Column="3" BorderColor = "Black" BorderWidth ="0.1"
                  TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
 
-        <Button Text="C" Grid.Row="5" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="C" Grid.Row="6" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnClear" />
-        <Button Text="-1" Grid.Row="5" Grid.Column="1" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="-1" Grid.Row="6" Grid.Column="1" BorderColor = "Black" BorderWidth ="0.1"
                 BackgroundColor="#808080" TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnClear1" />
-        <Button Text="=" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" BorderColor = "Black" BorderWidth ="0.1"
+        <Button Text="=" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="1" BorderColor = "Black" BorderWidth ="0.1"
                  TextColor="White"
                 FontSize="25" BorderRadius="0" Clicked="OnCalculate" />
-        <Button Text="^" Grid.Row="5" Grid.Column="3"
+        <Button Text="x" Grid.Row="5" Grid.Column="0"
                 TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
-        <Button Text="Up" Grid.Row="1" Grid.Column="4"
+               FontSize="25" BorderRadius="0" Clicked="OnNumber" />
+        <Button Text="x^2" Grid.Row="5" Grid.Column="1"
                 TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnUp" />
-        <Button Text="Back" Grid.Row="2" Grid.Column="4"
-                TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnBack" />
-        <Button Text=")" Grid.Row="3" Grid.Column="4"
-                TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnExpression" />
-        <Button Text="(" Grid.Row="4" Grid.Column="4"
-                TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" BorderRadius="0" Clicked="OnExpression" />
-        <Button Text="." Grid.Row="5" Grid.Column="4"
+               FontSize="25" BorderRadius="0" Clicked="OnNumber" />
+        <Button Text="." Grid.Row="5" Grid.Column="2"
                 TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" BorderRadius="0" Clicked="OnSymbol" />
     </Grid>

@@ -33,8 +33,9 @@ namespace Calculator.geometry
 
             Page to = selected switch
             {
-                "Площадь" => 
-                "Средняя линия" => 
+                "Площадь" => new NullPage(),
+                "Средняя линия" => new NullPage(),
+                _ => new NullPage()
             };
         }
     }

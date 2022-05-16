@@ -11,7 +11,7 @@ namespace Calculator
         // метод вывода результата
         public static string Calculate(string input)
         {
-            string output = Modification(input);
+            string output = Modification(Tg_mod(input));
             return Counting(output);
         }
         // приоритетность разрешенных символов
@@ -28,7 +28,8 @@ namespace Calculator
                 '^' => 5,
                 'c' => 6,
                 's' => 6,
-                'x' => 6,
+                'a' => 6,
+                'b' => 6,
                 _ => 8,
             };
         }
@@ -46,14 +47,20 @@ namespace Calculator
             return input;
         }
         // обработка операторов
-        private static bool IfOperator(char с)
+        private protected static bool IfOperator(char с)
         {
             if ("+-÷×^()cs".IndexOf(с) != -1)
                 return true;
             return false;
         }
+        private protected static bool Ifx(char с)
+        {
+            if ("ab".IndexOf(с) != -1)
+                return true;
+            return false;
+        }
         // обработка разделителей
-        private static bool Separator(char c)
+        private protected static bool Separator(char c)
         {
             if (" ".IndexOf(c) != -1)
                 return true;
@@ -63,7 +70,6 @@ namespace Calculator
         //преобразование строки в обратную польскую запись
         private protected static string Modification(string input)
         {
-            input = Tg_mod(input);
             string output = string.Empty;
             // operStack - основной стек выражения
             Stack<char> operStack = new();
@@ -74,7 +80,7 @@ namespace Calculator
                 {
                     if (Separator(input[i]))
                         continue;
-                    if (Char.IsDigit(input[i]))
+                    if (Char.IsDigit(input[i]) || Ifx(input[i]))
                     {
                         while (!Separator(input[i]) && !IfOperator(input[i]))
                         {
