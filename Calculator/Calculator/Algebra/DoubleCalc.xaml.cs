@@ -65,11 +65,11 @@ namespace Calculator.Algebra
             {
                 if (this.resultText.Text.IndexOf('x') != -1)
                 {
-                    double a, b, c;
+                    string a, b, c;
                     (a, b, c) = CalcMain.DoubleCalculator.DoubleCalculate(resultText.Text);
-                    this.resultA.Text += a.ToString();
-                    this.resultB.Text += b.ToString();
-                    this.resultD.Text += c.ToString();
+                    this.resultA.Text += a;
+                    this.resultB.Text += b;
+                    this.resultD.Text += c;
                     this.resultText.Text += " = " + 0;
                 }
                 else
