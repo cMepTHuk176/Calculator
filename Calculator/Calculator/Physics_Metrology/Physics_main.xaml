@@ -19,6 +19,9 @@
         <Button Text="Расчет погрешности прибора" Grid.Row="2"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" Clicked="OnSelected" />
+        <Button Text="Импульс тел" Grid.Row="4"
+               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
+               FontSize="25" Clicked="OnSelected" />
         <Button Text="Давление в газах" Grid.Row="3"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
                FontSize="25" Clicked="OnSelected"/>

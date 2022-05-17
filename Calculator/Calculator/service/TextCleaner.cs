@@ -2,6 +2,7 @@ using Xamarin.Forms;
 
 namespace Calculator
 {
+
     public static class TextCleaner
     {
         // стирает значение в каждом Entry
@@ -22,5 +23,6 @@ namespace Calculator
 
             return true;
         }
+        internal static readonly string ErrorText = "ОШИБКА";
     }
 }

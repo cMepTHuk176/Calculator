@@ -23,6 +23,7 @@ namespace Calculator
             {
                 "Расчет погрешности прибора" => new Inaccuracy_main(),
                 "Давление в газах" => new NullPage(),
+                "Импульс тел" => new Physics_Metrology.Impulse_Navigation(),
                 _ => new NullPage(),
             };
             await Navigation.PushAsync(pageToGo);
