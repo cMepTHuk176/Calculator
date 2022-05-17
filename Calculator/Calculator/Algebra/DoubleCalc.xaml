@@ -28,7 +28,7 @@
         <Label x:Name="resultA" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="x₁ = "
               TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" />
-        <Label x:Name="resultB" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="x = "
+        <Label x:Name="resultB" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="x₂ = "
               TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" />
         <Label x:Name="resultD" FontSize="20" FontAttributes="Bold" BackgroundColor="#1b1116" Text="D = "
