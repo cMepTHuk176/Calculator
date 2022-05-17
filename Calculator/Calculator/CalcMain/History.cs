@@ -7,8 +7,8 @@ namespace Calculator
 {
     class History
     {
-        static Stack<string> Last = new Stack<string>();
-        static Stack<string> First = new Stack<string>();
+        static Stack<string> Last = new();
+        static Stack<string> First = new();
         public static string LastFormula
         {
             set => Last.Push(value);

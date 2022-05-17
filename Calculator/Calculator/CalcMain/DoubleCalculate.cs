@@ -7,12 +7,21 @@ namespace Calculator.CalcMain
 {
     class DoubleCalculator : Calculator
     {
-        public static (double,double, double) DoubleCalculate(string input)
+        public static (double, double, double) DoubleCalculate(string input)
         {
-            return SolveQuadraticEquation(CountingDouble(Modification(XMod(input))));
+            string a, b, c;
+            (a, b, c) = XMod(input);
+            a = Counting(Modification(a));
+            b = Counting(Modification(b));
+            c = Counting(Modification(c));
+            if (a != "Ошибка" || b != "Ошибка" || c != "Ошибка")
+                return SolveQuadraticEquation(double.Parse(a), double.Parse(b), double.Parse(c));
+            else
+                return (-1, -1, -1);
         }
-        private static string XMod(string input)
+        private static (string, string, string) XMod(string input)
         {
+            string a = "0", b = "0", c = "0";
             if (input.IndexOf('x') != -1)
             {
                 if (input.IndexOf('^') + 1 != -1)
@@ -21,81 +30,46 @@ namespace Calculator.CalcMain
                 }
                 input = input.Replace("x", "b");
             }
-            return input;
-        }
-        private static void Istemp(Stack<double> temp,int input)
-        {
-            double result = 0;
-            double a = 0;
-            double b = 0;
-            if (temp.Peek() != 0)
-                a = temp.Pop();
-            if (temp.Peek() != 0)
-                b = temp.Pop();
-            else
-                temp.Push(a);
-            if (a != 0 && b != 0)
-            {
-                switch (input)
-                {
-                    case '+': result = b + a; break;
-                    case '-': result = b - a; break;
-                    case '×': result = b * a; break;
-                    case '÷': result = b / a; break;
-                }
-                temp.Push(result);
-            }
-        }
-        static (double, double, double) CountingDouble(string input)
-        {
-            Stack<double> tempA = new(); tempA.Push(0);
-            Stack<double> tempB = new(); tempB.Push(0);
-            Stack<double> tempC = new(); tempC.Push(0);
+
             for (int i = 0; i < input.Length; i++)
             {
-                if (Char.IsDigit(input[i]) || Ifx(input[i]))
+                string buf = null;
+                if(IfOperator(input[i]))
                 {
-                    string c = string.Empty;
-
-                    while (!Separator(input[i]) && !IfOperator(input[i]))
-                    {
-                        c += input[i];
-                        i++;
-                        if (i == input.Length) break;
-                    }
-                    if (c.IndexOf('a') != -1)
-                    {
-                        c = c.Remove(c.IndexOf('a'));
-                        if (c == "")
-                            c = "1";
-                        tempA.Push(double.Parse(c));
-                    }
-                    else if (c.IndexOf('b') != -1)
-                    {
-                        c = c.Remove(c.IndexOf('b'));
-                        if (c == "")
-                            c = "1";
-                        tempB.Push(double.Parse(c));
-                    }
-                    else if (c != "0")
-                        tempC.Push(double.Parse(c));
-                    i--;
+                    buf += input[i];
+                    i++;
                 }
-                else if (IfOperator(input[i]))
+                while (!IfOperator(input[i]))
                 {
-                    Istemp(tempA, input[i]);
-                    Istemp(tempB, input[i]);
-                    Istemp(tempC, input[i]);
-
+                    buf += input[i];
+                    i++;
+                    if (i == input.Length) break;
                 }
+                if (buf.IndexOf('a') != -1)
+                {
+                    buf = buf.Remove(buf.IndexOf('a'));
+                    if (buf == "" || buf == "-")
+                        buf += "1";
+                    a += buf;
+                }
+                else if (buf.IndexOf('b') != -1)
+                {
+                    buf = buf.Remove(buf.IndexOf('b'));
+                    if (buf == "" || buf == "-")
+                        buf += "1";
+                    b += buf;
+                }
+                else if (buf != "0")
+                    c += buf;
+                i--;
             }
-            return (tempA.Peek(), tempB.Peek(), tempC.Peek());
+            return (a, b, c);
         }
-        public static (double, double, double) SolveQuadraticEquation((double a, double b, double c)tuple)
+        public static (double, double, double) SolveQuadraticEquation(double a, double b, double c)
         {
-            double discRoot = Math.Sqrt(tuple.b * tuple.b - 4 * tuple.a * tuple.c);
-            double x1 = (tuple.b + discRoot) / (2 * tuple.a);
-            double x2 = (tuple.b - discRoot) / (2 * tuple.a);
+            double discRoot = Math.Sqrt(b * b - 4 * a * c);
+            double x1 = (-b + discRoot) / (2 * a);
+            double x2 = (-b - discRoot) / (2 * a);
             return (x1, x2, discRoot);
         }
 

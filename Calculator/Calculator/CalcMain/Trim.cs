@@ -38,6 +38,7 @@ namespace Calculator
                                 break;
                             }
                             num += button;
+                            num = num.TrimStart('0');
                             condition = 2;
                             break;
                     }

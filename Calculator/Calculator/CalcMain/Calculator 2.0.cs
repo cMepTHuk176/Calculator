@@ -53,12 +53,6 @@ namespace Calculator
                 return true;
             return false;
         }
-        private protected static bool Ifx(char с)
-        {
-            if ("ab".IndexOf(с) != -1)
-                return true;
-            return false;
-        }
         // обработка разделителей
         private protected static bool Separator(char c)
         {
@@ -70,6 +64,10 @@ namespace Calculator
         //преобразование строки в обратную польскую запись
         private protected static string Modification(string input)
         {
+            if (input.IndexOf('-') == 0)
+            {
+                input = input.Insert(0, "0");
+            }
             string output = string.Empty;
             // operStack - основной стек выражения
             Stack<char> operStack = new();
@@ -80,7 +78,7 @@ namespace Calculator
                 {
                     if (Separator(input[i]))
                         continue;
-                    if (Char.IsDigit(input[i]) || Ifx(input[i]))
+                    if (Char.IsDigit(input[i]))
                     {
                         while (!Separator(input[i]) && !IfOperator(input[i]))
                         {
