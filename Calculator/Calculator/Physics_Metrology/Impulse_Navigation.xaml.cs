@@ -24,7 +24,7 @@ namespace Calculator.Physics_Metrology
             Page pageToGo = selected switch
             {
                 "Импульс одиночного тела" => new finding_impulse(),
-                "Сохранение импульса" => new parallelepiped_volume(),
+                "Сохранение импульса" => new preservation_impulse()
             };
             await Navigation.PushAsync(pageToGo);
             ((ListView)sender).SelectedItem = null;
