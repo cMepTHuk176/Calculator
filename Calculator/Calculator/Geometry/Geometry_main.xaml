@@ -13,11 +13,11 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Text="геометрические калькуляторы" Grid.Row="0" FontSize="30" 
+        <Label Text="геометрические калькуляторы" Grid.Row="0" FontSize="25" 
                FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextColor="Black"/>
-        <Button Text="Расчет объема простых фигур" Grid.Row="2"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25"  Clicked="OnSelected"/>
+        <ImageButton Source="Figure_1.png" Grid.Row="1" ClassId="1"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
     </Grid>
 </ContentPage>

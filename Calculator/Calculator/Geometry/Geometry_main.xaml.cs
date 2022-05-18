@@ -18,11 +18,11 @@ namespace Calculator
         }
         private async void OnSelected(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            Page pageToGo = button.Text switch
+            ImageButton button = (ImageButton)sender;
+
+            Page pageToGo = button.ClassId switch
             {
-                "Расчет объема простых фигур" => new Volume_Main(),
-                _ => throw new NotImplementedException()
+                "1" => new Volume_Main(),
             };
             await Navigation.PushAsync(pageToGo);
 

@@ -13,7 +13,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Text="Формуры расчетов уравнений" Grid.Row="0" FontSize="30" 
+        <Label Text="Формуры расчетов уравнений" Grid.Row="0" FontSize="25" 
                FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextColor="Black"/>
         <ImageButton Source="quadratic_equation.png" Grid.Row="1" ClassId="1"
@@ -25,9 +25,9 @@
         <ImageButton Source="quadratic_equation_3.png" Grid.Row="3" ClassId="3"
                BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
                      Clicked="OnSelected"/>
-        <Button Text="Разложение на множители" Grid.Row="4"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25"/>
+        <ImageButton Source="quadratic_equation_4.png" Grid.Row="4" ClassId="4"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
     </Grid> 
 
 </ContentPage>
