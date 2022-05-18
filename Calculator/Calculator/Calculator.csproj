@@ -88,25 +88,25 @@
     <EmbeddedResource Update="Physics_Metrology\preservation_impulse.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-	  <EmbeddedResource Update="cube_difference.xaml">
+	  <EmbeddedResource Update="Algebra\cube_difference.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="cube_difference_m.xaml">
+	  <EmbeddedResource Update="Algebra\cube_difference_m.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="cube_sum.xaml">
+	  <EmbeddedResource Update="Algebra\cube_sum.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="cube_sum_m.xaml">
+	  <EmbeddedResource Update="Algebra\cube_sum_m.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="square_difference.xaml">
+	  <EmbeddedResource Update="Algebra\square_difference.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="square_difference_m.xaml">
+	  <EmbeddedResource Update="Algebra\square_difference_m.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="square_sum.xaml">
+	  <EmbeddedResource Update="Algebra\square_sum.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
   </ItemGroup>

@@ -19,12 +19,15 @@
         <ImageButton Source="quadratic_equation.png" Grid.Row="1" ClassId="1"
                BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
                      Clicked="OnSelected"/>
-        <Button Text="Кубическое уравнение" Grid.Row="2" 
+        <ImageButton Source="quadratic_equation_2.png" Grid.Row="2" ClassId="2"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
+        <ImageButton Source="quadratic_equation_3.png" Grid.Row="3" ClassId="3"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
+        <Button Text="Разложение на множители" Grid.Row="4"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25"  Clicked="OnSelected"/>
-        <Button Text="Разложение на множители" Grid.Row="3"
-               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25"  Clicked="OnSelected"/>
+               FontSize="25"/>
     </Grid> 
 
 </ContentPage>

@@ -135,6 +135,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="quadratic_equation.png" />
+    <Content Include="quadratic_equation_2.png" />
+    <Content Include="quadratic_equation_3.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

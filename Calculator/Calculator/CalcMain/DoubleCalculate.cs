@@ -35,7 +35,7 @@ namespace Calculator.CalcMain
                 {
                     if (input.IndexOf('^') + 1 != -1)
                     {
-                        input = input.Replace("x^2", "a");
+                        input = input.Replace("x²", "a");
                     }
                     input = input.Replace("x", "b");
                 }

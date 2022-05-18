@@ -19,7 +19,7 @@
     
     <StackLayout>
         <Label Text="Выберите формулу сокращённого умножения"
-                HorizontalOptions="Center" FontSize="Medium" BackgroundColor="LightYellow"/>
+                HorizontalOptions="Center" FontSize="Large" />
         <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
                   ItemTapped="figurelist_ItemTapped"/>
     </StackLayout>

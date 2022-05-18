@@ -23,7 +23,8 @@ namespace Calculator
             Page pageToGo = button.ClassId switch
             {
                 "1" => new Algebra.DoubleCalc(),
-                _ => new NullPage(),
+                "2" => new NullPage(),
+                "3" => new Multiplication_main()
             };
             await Navigation.PushAsync(pageToGo); 
 

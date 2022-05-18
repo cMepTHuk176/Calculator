@@ -35,7 +35,7 @@ namespace Calculator.geometry
             {
                 "Площадь" => new NullPage(),
                 "Средняя линия" => new NullPage(),
-                "" => new NullPage()
+                null => new NullPage(),
             };
         }
     }
