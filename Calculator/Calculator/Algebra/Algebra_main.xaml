@@ -13,7 +13,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Text="Формуры расчетов уравнений" Grid.Row="0" FontSize="25" 
+        <Label Text="Формулы расчетов уравнений" Grid.Row="0" FontSize="25" 
                FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextColor="Black"/>
         <ImageButton Source="quadratic_equation.png" Grid.Row="1" ClassId="1"
