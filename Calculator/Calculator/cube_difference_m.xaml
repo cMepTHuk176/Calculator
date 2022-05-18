@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.cube_difference_m"
+             Title="Разность кубов">
+    
+    <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resultText" FontSize="40" FontAttributes="Bold" BackgroundColor="#1b1116" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="5" MaxLines="4"/>
+
+        <Label x:Name="textForm" FontSize="Medium" FontAttributes="Bold" BackgroundColor="White"
+              TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        <Entry x:Name="entryA" Placeholder="a" Grid.Row="1" Grid.Column="3" FontSize="36" Grid.ColumnSpan="2" MaxLength="7"/>
+        <Entry x:Name="entryB" Placeholder="b" Grid.Row="2" Grid.Column="3" FontSize="36" Grid.ColumnSpan="2" MaxLength="7"/>
+
+        <Button Text="C" Grid.Row="2" Grid.Column="0" BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="#808080" TextColor="White"
+                FontSize="36" BorderRadius="0" Clicked="OnClear" />
+
+        <Button Text="=" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BorderColor = "Black" BorderWidth ="0.1"
+                BackgroundColor="white" TextColor="Black"
+                FontSize="36" BorderRadius="0" Clicked="Result_cube_difference_m"/>
+
+    </Grid>
+</ContentPage>
