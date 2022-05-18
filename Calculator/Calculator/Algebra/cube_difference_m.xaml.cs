@@ -15,7 +15,7 @@ namespace Calculator
         public cube_difference_m()
         {
             InitializeComponent();
-            textForm.Text = "a\u00B3-b\u00B3 = (a-b)(a\u00B2-ab+b\u00B2)";
+            textForm.Text = "a\u00B3-b\u00B3 = (a-b)(a\u00B2+ab+b\u00B2)";
         }
 
         private void OnClear(object sender, EventArgs e)
