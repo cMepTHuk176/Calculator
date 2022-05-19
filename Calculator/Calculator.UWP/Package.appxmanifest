@@ -8,8 +8,8 @@
 
   <Identity
     Name="5a0dad73-8154-4fce-98eb-52c313f532df"
-    Publisher="CN=c7f6398a-ab2d-461c-b003-d36ce833580c"
-    Version="1.0.0.0" />
+    Publisher="CN=qwest"
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

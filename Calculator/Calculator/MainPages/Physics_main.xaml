@@ -13,14 +13,17 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Text="Расчет и конвертация физических и метрологических величин" Grid.Row="0" FontSize="30" 
+        <Label Text="Расчет и конвертация физических и метрологических величин" Grid.Row="0" FontSize="25" 
                FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextColor="Black"/>
         <Button Text="Расчет погрешности прибора" Grid.Row="2"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" Clicked="OnSelected" />
+               FontSize="20" Clicked="OnSelected" />
+        <Button Text="Импульс тел" Grid.Row="4"
+               BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
+               FontSize="20" Clicked="OnSelected" />
         <Button Text="Давление в газах" Grid.Row="3"
                BackgroundColor="White" TextColor="Black" BorderColor = "Black" BorderWidth ="0.1"
-               FontSize="25" Clicked="OnSelected"/>
+               FontSize="20" Clicked="OnSelected"/>
     </Grid>
 </ContentPage>

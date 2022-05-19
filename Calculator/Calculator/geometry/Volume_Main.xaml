@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Volume_Main">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="figure" Type="{x:Type x:String}">
+                <x:String>Сфера</x:String>
+                <x:String>Конус</x:String>
+                <x:String>Параллепипед</x:String>
+                <x:String>Квадратная пирамида</x:String>
+                <x:String>Треугольная пирамида</x:String>
+                <x:String>Цилиндр</x:String>
+                <x:String>Назад</x:String>
+                    <x:String>Один</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Label Text="Выберите фигуру для нахождения объема"
+                HorizontalOptions="Center" FontSize="Large" />
+        <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" HorizontalOptions="CenterAndExpand" 
+                  ItemTapped="Figurelist_ItemTapped" RefreshControlColor="Aqua"/>
+    </StackLayout>
+</ContentPage>

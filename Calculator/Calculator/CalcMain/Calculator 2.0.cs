@@ -11,7 +11,7 @@ namespace Calculator.CalcMain
         // метод вывода результата
         public static string Calculate(string input)
         {
-            string output = Modification(input);
+            string output = Modification(Tg_mod(input));
             return Counting(output);
         }
         // приоритетность разрешенных символов
@@ -28,7 +28,8 @@ namespace Calculator.CalcMain
                 '^' => 5,
                 'c' => 6,
                 's' => 6,
-                'x' => 6,
+                'a' => 6,
+                'b' => 6,
                 _ => 8,
             };
         }
@@ -46,14 +47,14 @@ namespace Calculator.CalcMain
             return input;
         }
         // обработка операторов
-        private static bool IfOperator(char с)
+        private protected static bool IfOperator(char с)
         {
             if ("+-÷×^()cs".IndexOf(с) != -1)
                 return true;
             return false;
         }
         // обработка разделителей
-        private static bool Separator(char c)
+        private protected static bool Separator(char c)
         {
             if (" ".IndexOf(c) != -1)
                 return true;
@@ -63,7 +64,10 @@ namespace Calculator.CalcMain
         //преобразование строки в обратную польскую запись
         private protected static string Modification(string input)
         {
-            input = Tg_mod(input);
+            if (input.IndexOf('-') == 0)
+            {
+                input = input.Insert(0, "0");
+            }
             string output = string.Empty;
             // operStack - основной стек выражения
             Stack<char> operStack = new();
@@ -124,7 +128,7 @@ namespace Calculator.CalcMain
             return output;
         }
         // вычисление строки обратной польской записи в число
-        private static string Counting(string input)
+        private protected static string Counting(string input)
         {
             decimal result = 0;
             Stack<decimal> temp = new();

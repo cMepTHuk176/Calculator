@@ -48,6 +48,9 @@ namespace Calculator.Algebra
         private void OnClear(object sender, EventArgs e)
         {
             this.resultText.Text = Trim.Delete(resultText.Text, false);
+            resultA.Text = "X₁ = ";
+            resultB.Text = "X = ";
+            resultD.Text = "D = ";
             Ans = true;
         }
         private void OnClear1(object sender, EventArgs e)
@@ -60,8 +63,21 @@ namespace Calculator.Algebra
             History.LastFormula = this.resultText.Text;
             if (Ans)
             {
-                this.resultText.Text += " = " + CalcMain.DoubleCalculator.Calculate(resultText.Text);
-                Ans = false;
+                if (this.resultText.Text.IndexOf('x') != -1)
+                {
+                    string a, b, c;
+                    (a, b, c) = CalcMain.DoubleCalculator.DoubleCalculate(resultText.Text);
+                    this.resultA.Text += a;
+                    this.resultB.Text += b;
+                    this.resultD.Text += c;
+                    this.resultText.Text += " = " + 0;
+                }
+                else
+                {
+                    this.resultText.Text += " = " + CalcMain.DoubleCalculator.Calculate(resultText.Text);
+                }
+
+              Ans = false;
             }
 
         }

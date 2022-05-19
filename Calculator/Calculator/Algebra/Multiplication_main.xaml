@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Multiplication_main">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="figure" Type="{x:Type x:String}">
+                <x:String>Квадрат суммы</x:String>
+                <x:String>Квадрат разности</x:String>
+                <x:String>Разность квадратов</x:String>
+                <x:String>Куб суммы</x:String>
+                <x:String>Куб разности</x:String>
+                <x:String>Сумма кубов</x:String>
+                <x:String>Разность кубов</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Label Text="Выберите формулу сокращённого умножения"
+                HorizontalOptions="Center" FontSize="Large" />
+        <ListView x:Name="figurelist" ItemsSource="{StaticResource Key=figure}" 
+                  ItemTapped="figurelist_ItemTapped"/>
+    </StackLayout>
+</ContentPage>

@@ -20,7 +20,7 @@ namespace Calculator.MainPages
             Page to = selected switch
             {
                 "Расчет погрешности по классу точности прибора" => new accuracy_class(),
-                _ => throw new System.NotImplementedException()
+                _ => new NullPage()
             };
 
             await Navigation.PushAsync(to);
