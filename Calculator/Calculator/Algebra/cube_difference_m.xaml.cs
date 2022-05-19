@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Calculator
+namespace Calculator.Algebra
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class cube_difference_m : ContentPage

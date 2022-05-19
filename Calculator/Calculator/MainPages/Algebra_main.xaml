@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.Algebra_main">
+             x:Class="Calculator.MainPages.Algebra_main">
     <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

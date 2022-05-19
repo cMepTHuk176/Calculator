@@ -23,22 +23,22 @@ namespace Calculator
 
         private async void Figurelist_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            string selected = e.Item.ToString() ?? "";
+            //string selected = e.Item.ToString() ?? "";
 
-            Page pageToGo = selected switch
-            {
-                "Сфера" => new sphere_volume(),
-                "Конус" => new cone_volume(),
-                "Параллепипед" => new parallelepiped_volume(),
-                "Квадратная пирамида" => new square_pyramid_volume(),
-                "Треугольная пирамида" => new triangular_pyramid_volume(),
-                "Цилиндр" => new cylinder_volume(),
-                "Назад" => new Geometry_main(),
-                "Один" => new Geometry_main(),
-                _ => new NullPage()
-            };
-            await Navigation.PushAsync(pageToGo);
-            ((ListView)sender).SelectedItem = null;
+            //Page pageToGo = selected switch
+            //{
+            //    "Сфера" => new sphere_volume(),
+            //    "Конус" => new cone_volume(),
+            //    "Параллепипед" => new parallelepiped_volume(),
+            //    "Квадратная пирамида" => new square_pyramid_volume(),
+            //    "Треугольная пирамида" => new triangular_pyramid_volume(),
+            //    "Цилиндр" => new cylinder_volume(),
+            //    "Назад" => new Geometry_main(),
+            //    "Один" => new Geometry_main(),
+            //    _ => new NullPage()
+            //};
+            //await Navigation.PushAsync(pageToGo);
+            //((ListView)sender).SelectedItem = null;
         }
 
     }

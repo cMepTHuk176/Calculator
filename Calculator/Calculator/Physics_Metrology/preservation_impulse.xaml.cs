@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Calculator.Service;
+using System;
+using Calculator.Root;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,7 +29,7 @@ namespace Calculator.Physics_Metrology
         {
             if (!TextChecker.EntryCheck(entry_m1, entry_v1, entry_m2, entry_v2))
             {
-                resultText.Text = TextChecker.ErrorText;
+                resultText.Text = App.ErrorText;
                 return;
             }
 

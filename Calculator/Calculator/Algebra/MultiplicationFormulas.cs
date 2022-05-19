@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Calculator
+namespace Calculator.Algebra
 {
     public static class MultiplicationFormulas
     {

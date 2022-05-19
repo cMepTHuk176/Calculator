@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Calculator
+namespace Calculator.Algebra
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Multiplication_main : ContentPage

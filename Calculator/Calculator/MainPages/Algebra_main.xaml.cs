@@ -23,9 +23,9 @@ namespace Calculator.MainPages
             Page pageToGo = int.Parse(button.ClassId) switch
             {
                 1 => new Algebra.DoubleCalc(),
-                2 => throw new NotImplementedException(),
-                3 => throw new NotImplementedException(),
-                _ => throw new NotImplementedException()
+                2 => new Algebra.DoubleCalc(),
+                3 => new Algebra.Multiplication_main(),
+                _ => new Page()
             };
             await Navigation.PushAsync(pageToGo);
 
