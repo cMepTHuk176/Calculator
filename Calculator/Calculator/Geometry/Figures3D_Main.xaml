@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Geometry.Figures3D_Main"
+             Title="Геометрия">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="btnStyle" TargetType="Button" >
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="CornerRadius" Value="25" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="StartAndExpand" >
+
+            <Label Text="Выберите фигуру"
+                   HorizontalOptions="Center" 
+                   FontSize="30" 
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   />
+
+            <Button ClassId="sphere" 
+                    ImageSource="sphere.png"
+                    Text="Сфера"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource btnStyle}"
+                    />
+
+            <Button ClassId="cube"
+                    ImageSource="cube_edge.png"
+                    Text="Куб"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource btnStyle}"
+                    />
+
+            <Button ClassId="parallepiped"
+                    ImageSource="parallelepiped_edge.png"
+                    Text="Параллелепипед"
+                    FontSize="18"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource btnStyle}"
+                    />
+
+            <Button ClassId="cylinder"
+                    ImageSource="cylinder_radius_height.png"
+                    Text="Цилиндр"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource btnStyle}"
+                    />
+
+
+        </StackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

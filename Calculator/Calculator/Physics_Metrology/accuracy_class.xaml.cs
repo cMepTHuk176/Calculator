@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Calculator.Root;
+using Calculator.Service;
 
-namespace Calculator
+namespace Calculator.Physics_Metrology
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class accuracy_class : ContentPage

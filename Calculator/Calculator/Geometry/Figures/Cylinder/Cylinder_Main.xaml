@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Geometry.Figures.Cylinder.Cylinder_Main"
+             Title="Параметры цилиндра">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="btnStyle" TargetType="Button" >
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="CornerRadius" Value="25" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" >
+        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="StartAndExpand" >
+
+            <Label Text="Что дано?"
+               HorizontalOptions="Center" 
+               FontSize="30" 
+               FontAttributes="Bold"
+               TextColor="Black"
+               />
+
+            <Button ClassId="radius_height"
+                    ImageSource="cylinder_radius_height.png"
+                    Text="Радиус и высота"
+                    Clicked="Clicked"
+                    Style="{StaticResource btnStyle}"
+                    />
+            
+            
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

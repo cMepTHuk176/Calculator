@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Geometry.Figures.Sphere.Sphere_Main"
+             Title="Параметры сферы">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="btnStyle" TargetType="Button" >
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="CornerRadius" Value="25" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" >
+        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="StartAndExpand" >
+
+            <Label Text="Что дано?"
+               HorizontalOptions="Center" 
+               FontSize="30" 
+               FontAttributes="Bold"
+               TextColor="Black"
+               />
+
+            <Button ClassId="radius" 
+                ImageSource="sphere_radius.png"
+                Text="Радиус"
+                Clicked="Clicked"
+                Style="{StaticResource btnStyle}"
+                />
+
+            <Button ClassId="diameter" 
+                ImageSource="sphere_diameter.png"
+                Text="Диаметр"
+                Clicked="Clicked"
+                Style="{StaticResource btnStyle}"
+                />
+
+            <Button ClassId="area" 
+                ImageSource="sphere_area.png"
+                Text="Площадь поверхности"
+                Clicked="Clicked"
+                Style="{StaticResource btnStyle}"
+                />
+
+            <Button ClassId="volume" 
+                ImageSource="sphere_volume.png"
+                Text="Объем"
+                Clicked="Clicked"
+                Style="{StaticResource btnStyle}"
+                />
+
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

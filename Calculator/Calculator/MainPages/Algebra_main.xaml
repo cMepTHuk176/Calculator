@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPages.Algebra_main">
+    <Grid Padding="0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="#b0c4de">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="Формулы расчетов уравнений" Grid.Row="0" FontSize="30" 
+               FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextColor="Black"/>
+        <ImageButton Source="quadratic_equation.png" Grid.Row="1" ClassId="1"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                     Clicked="OnSelected"/>
+        <ImageButton  Grid.Row="2" ClassId="2"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+               Clicked="OnSelected"/>
+        <ImageButton Grid.Row="3" ClassId="3"
+               BackgroundColor="White" BorderColor = "Black" BorderWidth ="0.1"
+                Clicked="OnSelected"/>
+    </Grid> 
+
+</ContentPage>

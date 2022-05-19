@@ -4,9 +4,9 @@
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
-            LoadApplication(new Calculator.App());
+            LoadApplication(new Root.App());
         }
     }
 }

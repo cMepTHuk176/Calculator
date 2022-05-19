@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
+using Calculator.Root;
 
-namespace Calculator
+namespace Calculator.Service
 {
     /// <summary>
     /// Класс-конвертер, преобразующий различные величины

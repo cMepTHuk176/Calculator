@@ -26,52 +26,94 @@
     <Compile Update="Algebra\DoubleCalc.xaml.cs">
       <DependentUpon>DoubleCalc.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Shell\AppShell.xaml.cs">
-      <DependentUpon>AppShell.xaml</DependentUpon>
+    <Compile Update="Geometry\Figures\Cube\Area.xaml.cs">
+      <DependentUpon>Area.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Geometry\1.1_sphere_volume.xaml.cs">
-      <DependentUpon>1.1_sphere_volume.xaml</DependentUpon>
+    <Compile Update="Geometry\Figures\Sphere\Sphere_Main.xaml.cs">
+      <DependentUpon>Sphere_Main.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Geometry\1.2_parallelepiped_volume.xaml.cs">
-      <DependentUpon>1.2_parallelepiped_volume.xaml</DependentUpon>
+    <Compile Update="Geometry\Figures3D_Main.xaml.cs">
+      <DependentUpon>Figures3D_Main.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Geometry\1.3_square_pyramid_volume.xaml.cs">
-      <DependentUpon>1.3_square_pyramid_volume.xaml</DependentUpon>
+    <Compile Update="Geometry\Figures\Sphere\Radius.xaml.cs">
+      <DependentUpon>Radius.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Geometry\1.4_cone_volume.xaml.cs">
-      <DependentUpon>1.4_cone_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Geometry\1.5_triangular_pyramid_volume.xaml.cs">
-      <DependentUpon>1.5_triangular_pyramid_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Geometry\1.6_cylinder_volume.xaml.cs">
-      <DependentUpon>1.6_cylinder_volume.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Geometry\Volume_Main.xaml.cs">
-      <DependentUpon>Volume_Main.xaml</DependentUpon>
+    <Compile Update="Geometry\Figures\Sphere\Volume.xaml.cs">
+      <DependentUpon>Volume.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Algebra\Algebra_main.xaml">
+    <EmbeddedResource Update="Geometry\Figures2D_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Cube_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Diagonal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\DiagonalSide.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Edge.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Perimeter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Area.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\SideArea.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cube\Volume.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cylinder\Cylinder_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Cylinder\RadiusHeight.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Parallepiped\Edges.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Parallepiped\EdgesDiagonal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Parallepiped\Parallepiped_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Sphere\Area.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Sphere\Diameter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Sphere\Radius.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPages\Algebra_main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Algebra\DoubleCalc.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\Geometry_main.xaml">
+    <EmbeddedResource Update="Geometry\Figures\Sphere\Sphere_Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Geometry\Figures\Sphere\Volume.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPages\Geometry_main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Physics_Metrology\accuracy_class.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Shell\AppShell.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\trapezoid.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Physics_Metrology\Inaccuracy_main.xaml">
+    <EmbeddedResource Update="MainPages\Inaccuracy_main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Page1.xaml">
@@ -79,28 +121,10 @@
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.1_sphere_volume.xaml">
+    <EmbeddedResource Update="Geometry\Figures3D_Main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\Volume_Main.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.2_parallelepiped_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.3_square_pyramid_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.4_cone_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.5_triangular_pyramid_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Geometry\1.6_cylinder_volume.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Physics_Metrology\Physics_main.xaml">
+    <EmbeddedResource Update="MainPages\Physics_main.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

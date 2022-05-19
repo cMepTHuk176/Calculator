@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Calculator
+namespace Calculator.CalcMain
 {
-    class Calculator
+    class Calculator1
     {
 
         // Counting соответственно его вычисляет

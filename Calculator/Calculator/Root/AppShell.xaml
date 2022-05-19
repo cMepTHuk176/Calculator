@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:Calculator.MainPages" 
+       x:Class="Calculator.Root.AppShell">
+
+    
+    <FlyoutItem Title="Калькулятор" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Алгебра" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Algebra_main}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Геометрия" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Geometry_main}"/>
+    </FlyoutItem>
+
+</Shell>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPages.Geometry_main">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="imgBtnStyle" TargetType="ImageButton">
+                <Setter Property="Aspect" Value="AspectFit"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" Spacing="15">
+
+        <Label Text="Геометрические калькуляторы"
+               Grid.Row="0"
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               TextColor="Black"
+               BackgroundColor="White"
+               />
+
+        <ImageButton Source="volume.png"
+                     ClassId="volume"
+                     Clicked="Clicked"
+                     Style="{StaticResource imgBtnStyle}"/>
+
+        <ImageButton Source="plain.png"
+                     ClassId="plain"
+                     Clicked="Clicked"
+                     Style="{StaticResource imgBtnStyle}"/>
+    </StackLayout>
+</ContentPage>

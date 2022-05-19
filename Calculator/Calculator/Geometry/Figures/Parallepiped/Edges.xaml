@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Geometry.Figures.Parallepiped.Edges"
+             Title="Что найти?">
+
+
+    <Grid BackgroundColor="#1b1116" RowSpacing="0" ColumnSpacing="0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <ScrollView Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" >
+            <Label x:Name="resultText"
+               Text="0"
+               TextColor="White" 
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Center"
+               FontSize="32"
+               FontAttributes="Bold"
+               BackgroundColor="#1b1116"
+               LineBreakMode="CharacterWrap" 
+               Padding="10"
+               />
+
+        </ScrollView>
+
+        <Picker x:Name="picker"
+                Title="Что найти?"
+                FontSize="27"
+                HorizontalTextAlignment="Start"
+                SelectedIndex="0" 
+                BackgroundColor="Silver"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
+                />
+
+        <Entry x:Name="entry_A"
+               Placeholder="a"
+               FontSize="27"
+               BackgroundColor="White"
+               MaxLength="8"
+               Keyboard="Numeric"
+               Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               />
+
+        <Entry x:Name="entry_B"
+               Placeholder="b"
+               FontSize="27"
+               BackgroundColor="White"
+               MaxLength="8"
+               Keyboard="Numeric"
+               Grid.Row="2"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               />
+
+        <Entry x:Name="entry_C"
+               Placeholder="c"
+               FontSize="27"
+               BackgroundColor="White"
+               MaxLength="8"
+               Keyboard="Numeric"
+               Grid.Row="2"
+               Grid.Column="4"
+               Grid.ColumnSpan="2"
+               />
+
+        <Button Text="C"
+                FontSize="27"
+                BackgroundColor="IndianRed"
+                Clicked="Cancel"
+                Grid.Row="3"
+                Grid.Column="0"
+                />
+
+        <Button Text="Рассчитать"
+                TextTransform="None"
+                FontSize="27"
+                BackgroundColor="White"
+                Clicked="Result"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                />
+
+    </Grid>
+
+
+</ContentPage>

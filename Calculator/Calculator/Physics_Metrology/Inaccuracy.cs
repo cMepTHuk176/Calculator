@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.Physics_Metrology
 {
     public static class Inaccuracy
     {
