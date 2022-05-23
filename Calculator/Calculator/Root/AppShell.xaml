@@ -14,5 +14,8 @@
     <FlyoutItem Title="Геометрия" Icon="xamarin.png">
         <ShellContent ContentTemplate="{DataTemplate pages:Geometry_main}"/>
     </FlyoutItem>
+    <FlyoutItem Title="Физика" Icon="xamarin.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:Physics_main}"/>
+    </FlyoutItem>
 
 </Shell>

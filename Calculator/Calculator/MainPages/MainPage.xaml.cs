@@ -32,6 +32,10 @@ namespace Calculator.MainPages
         }
         private void OnExpression(object sender, EventArgs e)
         {
+            if(this.resultText.Text == "0")
+            {
+                this.resultText.Text = "";
+            }
             Button button = (Button)sender;
             this.resultText.Text += button.Text;
         }

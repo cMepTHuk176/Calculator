@@ -25,7 +25,7 @@ namespace Calculator.MainPages
                 1 => new Algebra.DoubleCalc(),
                 2 => new Algebra.DoubleCalc(),
                 3 => new Algebra.Multiplication_main(),
-                _ => new Page()
+                _ => new ()
             };
             await Navigation.PushAsync(pageToGo);
 

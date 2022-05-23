@@ -5,13 +5,13 @@ namespace Calculator.CalcMain
 {
     class Calculator1
     {
-
+        // Modification - преобразование строки в обратную польскую запись
         // Counting соответственно его вычисляет
         // Все исключения обрабатываются тупым try
         // метод вывода результата
         public static string Calculate(string input)
         {
-            string output = Modification(Tg_mod(input));
+            string output = Modification(input);
             return Counting(output);
         }
         // приоритетность разрешенных символов
@@ -168,7 +168,7 @@ namespace Calculator.CalcMain
                         temp.Push(result);
                     }
                 }
-                buf = Convert.ToString(temp.Peek());
+                buf = Convert.ToString(Math.Round(temp.Peek(),5));
             }
             catch
             {

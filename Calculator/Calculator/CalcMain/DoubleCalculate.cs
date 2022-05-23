@@ -12,7 +12,7 @@ namespace Calculator.CalcMain
         // далее строка отправляется в конструкцию Modification -> Counting 
         // стандартного калькулятора на обратной польской записи.
         // После вычислений 3 строки, содержащие по одному числу (по крайней мере 0)
-        // проходят расчет квадратного уравнения.
+        // проходят расчет квадратного уравнения SolveQuadraticEquation
         // Если число комплексное возратит NaN
         public static (string, string, string) DoubleCalculate(string input)
         {
@@ -93,7 +93,7 @@ namespace Calculator.CalcMain
             double discRoot = Math.Sqrt(b * b - 4 * a * c);
             double x1 = (-b + discRoot) / (2 * a);
             double x2 = (-b - discRoot) / (2 * a);
-            return (x1.ToString(), x2.ToString(), discRoot.ToString());
+            return (Math.Round(x1,3).ToString(), Math.Round(x2, 3).ToString(), Math.Round(discRoot, 3).ToString());
         }
 
     }
